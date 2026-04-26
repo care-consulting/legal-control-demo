@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARE Legal Control</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="landing-screen" id="landing-screen">
+      <header class="landing-nav">
+        <div class="brand landing-brand">
+          <div class="brand-mark">CL</div>
+          <div>
+            <p>CARE Legal Control</p>
+            <span>Operational layer for companies</span>
+          </div>
+        </div>
+        <button class="ghost-button" id="open-workspace">Scegli vista</button>
+      </header>
+
+      <section class="landing-hero">
+        <div class="landing-copy">
+          <p class="eyebrow">Legal operations for companies</p>
+          <h1>Governare il lavoro legale ricorrente, senza trasformarlo in dipendenza esterna.</h1>
+          <p class="landing-text">
+            CARE Legal Control aiuta le aziende a organizzare contratti, scadenze, adempimenti e
+            rischi in un unico ambiente operativo. Il risultato è più autonomia interna, meno
+            disordine e meno tempo perso su attività ripetitive.
+          </p>
+          <div class="landing-actions">
+            <button class="primary-button" id="open-company-demo">Guarda vista azienda</button>
+            <button class="ghost-button" id="open-partner-demo">Guarda vista partner</button>
+          </div>
+        </div>
+        <div class="landing-panel">
+          <div class="landing-metric">
+            <span>Operational score</span>
+            <strong>79/100</strong>
+          </div>
+          <div class="landing-mini-list">
+            <div>
+              <strong>36 contratti attivi</strong>
+              <p>Fornitura, distribuzione, consulenza e NDA governati in archivio unico con storico versioni.</p>
+            </div>
+            <div>
+              <strong>5 scadenze nei prossimi 45 giorni</strong>
+              <p>Rinnovi taciti, nomine privacy e delibere societarie monitorati in anticipo.</p>
+            </div>
+            <div>
+              <strong>2 rischi aperti</strong>
+              <p>Le eccezioni contrattuali vengono evidenziate e portate in escalation solo quando serve.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-proof">
+        <article class="proof-card">
+          <p class="eyebrow">Per l’azienda</p>
+          <h3>Più autonomia interna</h3>
+          <p>L’operatività standard viene gestita da amministrazione, HR, acquisti e operations.</p>
+        </article>
+        <article class="proof-card">
+          <p class="eyebrow">Per il management</p>
+          <h3>Più controllo</h3>
+          <p>Contratti, rinnovi e adempimenti diventano leggibili in una dashboard unica.</p>
+        </article>
+        <article class="proof-card">
+          <p class="eyebrow">Per il partner legale</p>
+          <h3>Più casi qualificati</h3>
+          <p>La consulenza si concentra sulle eccezioni, non sul lavoro ripetitivo a basso margine.</p>
+        </article>
+      </section>
+
+      <section class="landing-entry">
+        <article class="entry-card">
+          <p class="eyebrow">Percorso 1</p>
+          <h3>Vista azienda</h3>
+          <p>Mostra il prodotto come workspace operativo per amministrazione, HR, acquisti e management.</p>
+          <button class="primary-button entry-button" data-mode="company">Apri vista azienda</button>
+        </article>
+        <article class="entry-card">
+          <p class="eyebrow">Percorso 2</p>
+          <h3>Vista partner</h3>
+          <p>Mostra il prodotto come canale di presidio clienti, escalation qualificate e reporting legale.</p>
+          <button class="ghost-button entry-button" data-mode="partner">Apri vista partner</button>
+        </article>
+      </section>
+    </section>
+
+    <div class="intro-modal" id="intro-modal">
+      <div class="intro-card">
+        <div class="intro-copy">
+          <p class="eyebrow">MVP Demo</p>
+          <h1 id="intro-title">Il layer operativo per governare il lavoro legale ricorrente.</h1>
+          <p id="intro-text">
+            Contratti, scadenze, adempimenti e rischi in un unico ambiente. L’azienda presidia
+            le attività standard in autonomia e scala solo i casi che richiedono intervento specialistico.
+          </p>
+        </div>
+        <div class="intro-grid">
+          <article>
+            <strong>Riduce il disordine operativo</strong>
+            <p>Archivio unico, alert e workflow standardizzati.</p>
+          </article>
+          <article>
+            <strong>Aumenta l’autonomia interna</strong>
+            <p>Bozze guidate e checklist per le attività ripetitive.</p>
+          </article>
+          <article>
+            <strong>Attiva supporto solo quando necessario</strong>
+            <p>Il sistema evidenzia eccezioni, rischi e casi fuori standard.</p>
+          </article>
+        </div>
+        <section class="setup-strip">
+          <div>
+            <p class="eyebrow">Onboarding iniziale</p>
+            <strong>Attivazione aziendale in meno di 10 minuti</strong>
+          </div>
+          <div class="setup-steps">
+            <span>1. Profilo azienda</span>
+            <span>2. Documenti iniziali</span>
+            <span>3. Attivazione alert</span>
+          </div>
+        </section>
+        <div class="intro-actions">
+          <button class="primary-button" id="enter-app">Entra nella demo</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="shell app-shell-hidden" id="app-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="brand">
+            <div class="brand-mark">LF</div>
+            <div>
+              <p>CARE Legal Control</p>
+              <span>Legal operations layer for companies</span>
+            </div>
+          </div>
+
+          <nav class="nav">
+            <button class="nav-item nav-company active" data-panel="overview">Panoramica</button>
+            <button class="nav-item nav-company" data-panel="contracts">Contratti</button>
+            <button class="nav-item nav-company nav-emphasis" data-panel="repository">Repository</button>
+            <button class="nav-item nav-company" data-panel="deadlines">Scadenze</button>
+            <button class="nav-item nav-company" data-panel="compliance">Compliance</button>
+            <button class="nav-item nav-company" data-panel="risks">Rischi</button>
+            <button class="nav-item nav-company" data-panel="reports">Report</button>
+            <button class="nav-item nav-partner" data-panel="partner">Portafoglio</button>
+            <button class="nav-item nav-partner nav-emphasis" data-panel="repository">Repository</button>
+            <button class="nav-item nav-partner" data-panel="risks">Escalation</button>
+            <button class="nav-item nav-partner" data-panel="contract-detail">Caso attivo</button>
+            <button class="nav-item nav-partner" data-panel="reports">Report</button>
+          </nav>
+        </div>
+
+        <section class="sidebar-card">
+          <p class="eyebrow" id="sidebar-eyebrow">Posizionamento</p>
+          <h3 id="sidebar-title">Autonomia operativa, consulenza solo per eccezioni</h3>
+          <p id="sidebar-text">
+            La piattaforma governa contratti, scadenze e adempimenti ricorrenti. Il supporto
+            specialistico si attiva solo nei casi fuori standard.
+          </p>
+        </section>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="workspace-eyebrow">Company workspace</p>
+            <h1 id="workspace-title">CARE Manufacturing S.r.l.</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-button" id="start-tour">Avvia guida</button>
+            <div class="pulse">
+              <span></span>
+              Operating layer active
+            </div>
+            <button class="ghost-button">Export executive report</button>
+          </div>
+        </header>
+
+        <section class="panel active" id="overview">
+          <section class="hero" data-tour-anchor="overview-hero">
+            <div>
+              <p class="eyebrow">Autonomia operativa</p>
+              <h2>Controlla contratti, obblighi e documenti in un unico workspace.</h2>
+              <p class="hero-copy">
+                La struttura interna governa attività legali ricorrenti, documenti chiave e scadenze
+                senza dipendere da passaggi manuali. Le escalation partono solo quando c’è una reale eccezione.
+              </p>
+            </div>
+            <div class="hero-card">
+              <span>Operational score</span>
+              <strong>79/100</strong>
+              <p>Presidio solido. Un rinnovo tacito e una nomina privacy richiedono azione entro 10 giorni.</p>
+            </div>
+          </section>
+
+          <section class="quick-actions">
+            <button class="action-tile" data-panel-target="contracts">
+              <strong>Crea un contratto</strong>
+              <p>Genera una bozza standardizzata in pochi passaggi.</p>
+            </button>
+            <button class="action-tile" data-panel-target="deadlines">
+              <strong>Controlla le scadenze</strong>
+              <p>Individua subito rinnovi taciti, alert e attività in ritardo.</p>
+            </button>
+            <button class="action-tile" data-panel-target="compliance">
+              <strong>Chiudi gli adempimenti</strong>
+              <p>Completa checklist e riduci i passaggi non presidiati.</p>
+            </button>
+          </section>
+
+          <section class="content-grid notification-layout">
+            <article class="card" data-tour-anchor="overview-alerts">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Centro notifiche</p>
+                  <h3>Cosa richiede attenzione</h3>
+                </div>
+                <span class="badge warning-badge">3 alert</span>
+              </div>
+              <div class="notification-list">
+                <button class="notification-item" data-panel-target="deadlines">
+                  <strong>Rinnovo automatico in arrivo</strong>
+                  <p>Il contratto quadro con Delta Components si rinnova il 30 aprile 2026 senza conferma interna.</p>
+                </button>
+                <button class="notification-item" data-panel-target="compliance">
+                  <strong>Documenti mancanti</strong>
+                  <p>Nomina a responsabile esterno e istruzioni operative mancanti per il provider HR cloud.</p>
+                </button>
+                <button class="notification-item" data-panel-target="risks">
+                  <strong>Clausola sbilanciata rilevata</strong>
+                  <p>Penale per ritardo senza cap e limitazione di responsabilità assente nel contratto di fornitura.</p>
+                </button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Scoring</p>
+                  <h3>Maturità legale-operativa</h3>
+                </div>
+                <span class="badge success">86% completo</span>
+              </div>
+              <div class="maturity-list">
+                <div class="maturity-row">
+                  <div>
+                    <strong>Documenti societari</strong>
+                    <p>Statuto, verbali e deleghe operative aggiornati</p>
+                  </div>
+                  <span>92%</span>
+                </div>
+                <div class="maturity-row">
+                  <div>
+                    <strong>Presidio contrattuale</strong>
+                    <p>Archivio centralizzato e 6 template standard disponibili</p>
+                  </div>
+                  <span>84%</span>
+                </div>
+                <div class="maturity-row">
+                  <div>
+                    <strong>Compliance privacy</strong>
+                    <p>Manca completamento dossier provider HR cloud</p>
+                  </div>
+                  <span>73%</span>
+                </div>
+                <div class="maturity-row">
+                  <div>
+                    <strong>Workflow interni</strong>
+                    <p>Escalation e approvazioni presenti ma non complete sui rinnovi</p>
+                  </div>
+                  <span>77%</span>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="stats-grid">
+            <article class="stat-card">
+              <span>Contratti attivi</span>
+              <strong>36</strong>
+              <p>12 fornitura, 8 consulenza, 9 NDA, 4 distribuzione, 3 locazioni commerciali.</p>
+            </article>
+            <article class="stat-card">
+              <span>Scadenze 45 gg</span>
+              <strong>5</strong>
+              <p>2 rinnovi, 2 adempimenti privacy, 1 delibera deleghe operative.</p>
+            </article>
+            <article class="stat-card">
+              <span>Compliance operativa</span>
+              <strong>81%</strong>
+              <p>Privacy e governance presidiate. Da completare il flusso fornitori digitali.</p>
+            </article>
+            <article class="stat-card">
+              <span>Rischi aperti</span>
+              <strong>2</strong>
+              <p>Un rischio alto su penali supply, uno medio su rinnovo tacito non presidiato.</p>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Operazioni</p>
+                  <h3>Cosa fare oggi</h3>
+                </div>
+                <span class="badge">4 task</span>
+              </div>
+              <div class="task-list">
+                <div class="task-item">
+                  <div>
+                    <strong>Valuta rinnovo contratto quadro Delta Components</strong>
+                    <p>Scade il 30 aprile 2026. Verifica se confermare il rinnovo o inviare disdetta entro il 20 aprile.</p>
+                  </div>
+                  <button class="tag warning clickable-task" data-panel-target="contracts">Apri</button>
+                </div>
+                <div class="task-item">
+                  <div>
+                    <strong>Completa fascicolo privacy provider HR cloud</strong>
+                    <p>Mancano nomina a responsabile esterno e istruzioni per gli autorizzati.</p>
+                  </div>
+                  <button class="tag clickable-task" data-panel-target="compliance">Apri</button>
+                </div>
+                <div class="task-item">
+                  <div>
+                    <strong>Chiudi aggiornamento policy trasferte e spese</strong>
+                    <p>Bozza pronta; resta approvazione finale del CFO e pubblicazione interna.</p>
+                  </div>
+                  <button class="tag success clickable-task" data-panel-target="compliance">Apri</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Documenti</p>
+                  <h3>Archivio essenziale</h3>
+                </div>
+                <span class="badge dark">Sempre accessibile</span>
+              </div>
+              <div class="doc-list">
+                <div class="doc-row">
+                  <div>
+                    <strong>Contratto quadro di fornitura - Delta Components</strong>
+                    <p>Ultima versione firmata il 12 aprile 2025</p>
+                  </div>
+                  <button class="link-button" data-panel-target="contract-detail">Apri scheda</button>
+                </div>
+                <div class="doc-row">
+                  <div>
+                    <strong>Nomina responsabile esterno trattamento - Payroll Cloud</strong>
+                    <p>Bozza aggiornata il 2 marzo 2026</p>
+                  </div>
+                  <span>DOCX</span>
+                </div>
+                <div class="doc-row">
+                  <div>
+                    <strong>Verbale CDA - deleghe operative 2026</strong>
+                    <p>Approvato il 16 gennaio 2026</p>
+                  </div>
+                  <span>PDF</span>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card" data-tour-anchor="company-comms">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Comunicazioni cliente</p>
+                  <h3>Canale tracciato al posto delle mail sparse</h3>
+                </div>
+                <span class="badge">Omnicanale</span>
+              </div>
+              <div class="comms-grid">
+                <div class="comms-item">
+                  <strong>Thread operativi centralizzati</strong>
+                  <p>Richieste, approvazioni, invii documenti e risposte del partner vengono gestiti qui invece che via mail destrutturate.</p>
+                </div>
+                <div class="comms-item">
+                  <strong>Repository documentale configurabile</strong>
+                  <p>I documenti risiedono in una repository collegata, configurabile in base alle implementazioni tecnologiche e ai software già usati dal partner.</p>
+                </div>
+                <div class="comms-item">
+                  <strong>Notifiche configurabili</strong>
+                  <p>Il cliente può ricevere alert via mail, in-app o WhatsApp, in base a ruolo, urgenza e preferenze di processo.</p>
+                </div>
+                <div class="comms-item">
+                  <strong>Tracciabilità completa</strong>
+                  <p>Tutte le comunicazioni vengono registrate, storicizzate e rese consultabili con data, autore e documento associato.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Canali attivi</p>
+                  <h3>Configurazione notifiche</h3>
+                </div>
+                <span class="badge success">3 canali</span>
+              </div>
+              <div class="template-library">
+                <div class="template-chip">Mail per scadenze e approvazioni</div>
+                <div class="template-chip">Notifiche in-app per task e documenti</div>
+                <div class="template-chip">WhatsApp per alert urgenti</div>
+                <div class="template-chip">Storico conversazioni per audit</div>
+              </div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Libreria template</p>
+                  <h3>Documenti standard disponibili</h3>
+                </div>
+                <span class="badge dark">6 template</span>
+              </div>
+              <div class="template-library">
+                <div class="template-chip">NDA / Riservatezza</div>
+                <div class="template-chip">Contratto di fornitura</div>
+                <div class="template-chip">Contratto di servizi</div>
+                <div class="template-chip">Contratto di consulenza</div>
+                <div class="template-chip">Contratto di distribuzione</div>
+                <div class="template-chip">Nomina privacy</div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Partner legale</p>
+                  <h3>Punti di intervento</h3>
+                </div>
+                <span class="badge">3 ingressi</span>
+              </div>
+              <div class="task-list">
+                <div class="task-item">
+                  <div>
+                    <strong>Validazione finale template</strong>
+                    <p>Verifica la tenuta giuridica dei modelli standard usati dall’azienda.</p>
+                  </div>
+                  <span class="tag">Standard</span>
+                </div>
+                <div class="task-item">
+                  <div>
+                    <strong>Revisione clausole critiche</strong>
+                    <p>Entra solo su penali, limitazione responsabilità, esclusiva o recesso.</p>
+                  </div>
+                  <span class="tag warning">Critico</span>
+                </div>
+                <div class="task-item">
+                  <div>
+                    <strong>Supporto negoziazione</strong>
+                    <p>Attivabile quando la controparte propone modifiche fuori standard.</p>
+                  </div>
+                  <span class="tag success">On demand</span>
+                </div>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="panel" id="contracts">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Creazione guidata</p>
+              <h2>Genera contratti standard in autonomia</h2>
+            </div>
+            <span class="badge">Template standard</span>
+          </div>
+
+          <section class="contracts-layout">
+            <article class="card" data-tour-anchor="contracts-builder">
+              <form id="contract-form" class="form-grid">
+                <label>
+                  Tipo contratto
+                  <select name="contractType">
+                    <option value="NDA">NDA / Riservatezza</option>
+                    <option value="Consulenza">Contratto di consulenza</option>
+                    <option value="Fornitura">Contratto di fornitura</option>
+                    <option value="Servizi">Contratto di servizi</option>
+                    <option value="Distribuzione">Contratto di distribuzione</option>
+                  </select>
+                </label>
+
+                <label>
+                  Azienda / controparte
+                  <input name="counterparty" value="Beta Logistics S.r.l." />
+                </label>
+
+                <label>
+                  Durata
+                  <input name="duration" value="24 mesi" />
+                </label>
+
+                <label>
+                  Foro competente
+                  <input name="jurisdiction" value="Milano" />
+                </label>
+
+                <label class="full">
+                  Oggetto
+                  <textarea name="scope" rows="4">Servizi logistici e gestione trasporto merci sul territorio nazionale con SLA di consegna e obblighi di riservatezza commerciale.</textarea>
+                </label>
+
+                <div class="full">
+                  <p class="field-title">Clausole opzionali</p>
+                  <div class="toggle-grid">
+                    <label class="toggle"><input type="checkbox" name="autoRenew" checked /> Rinnovo automatico</label>
+                    <label class="toggle"><input type="checkbox" name="penalties" checked /> Penali per ritardo</label>
+                    <label class="toggle"><input type="checkbox" name="confidentiality" checked /> Riservatezza rafforzata</label>
+                    <label class="toggle"><input type="checkbox" name="termination" checked /> Recesso anticipato</label>
+                  </div>
+                </div>
+
+                <div class="form-actions full">
+                  <button type="submit" class="primary-button">Genera bozza</button>
+                  <button type="button" class="ghost-button" id="reset-contract">Reset</button>
+                </div>
+              </form>
+            </article>
+
+            <article class="card draft-card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Output</p>
+                  <h3>Bozza contratto</h3>
+                </div>
+                <span class="badge success">Pronta</span>
+              </div>
+              <div id="draft-output" class="draft-output"></div>
+              <div class="draft-footer">
+                <button class="primary-button">Esporta bozza</button>
+                <button class="ghost-button">Invia in approvazione</button>
+                <button class="ghost-button accent-ghost">Richiedi validazione legale</button>
+              </div>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Workflow</p>
+                <h3>Audit trail della bozza</h3>
+              </div>
+            </div>
+            <div class="audit-trail">
+              <div class="audit-item">
+                <strong>25 aprile 2026, 10:12</strong>
+                <p>Bozza creata dal team operations usando template standard servizi.</p>
+              </div>
+              <div class="audit-item">
+                <strong>25 aprile 2026, 10:19</strong>
+                <p>Inviata ad acquisti per validazione SLA e livelli di servizio.</p>
+              </div>
+              <div class="audit-item">
+                <strong>25 aprile 2026, 10:24</strong>
+                <p>Flag automatico su penali e rinnovo automatico: possibile richiesta revisione legale.</p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel" id="repository" data-tour-anchor="repository-hub">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Repository documentale</p>
+              <h2 id="repository-title">Documenti, messaggi e stati in un unico workspace tracciato</h2>
+            </div>
+            <span class="badge dark" id="repository-badge">Core workflow</span>
+          </div>
+          <p class="hero-copy repository-copy" id="repository-copy">
+            Qui l’azienda gestisce fascicoli, thread, allegati e stati di lavorazione in un unico spazio operativo. Tutto resta tracciato e sostituisce lo scambio dispersivo via mail.
+          </p>
+
+          <section class="repository-layout">
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Task attivi</p>
+                  <h3>Comunicazioni aperte</h3>
+                </div>
+                <span class="badge">3 thread</span>
+              </div>
+              <div class="thread-list">
+                <button class="thread-card active-thread">
+                  <div>
+                    <strong>Rinnovo contratto quadro Delta Components</strong>
+                    <p>Oggetto: conferma rinnovo o disdetta entro il 20 aprile 2026</p>
+                  </div>
+                  <div class="thread-meta">
+                    <span class="tag warning">In attesa cliente</span>
+                    <small>25 apr 2026 · 10:41</small>
+                  </div>
+                </button>
+                <button class="thread-card">
+                  <div>
+                    <strong>Nomina privacy Payroll Cloud</strong>
+                    <p>Oggetto: integrazione allegati mancanti e istruzioni autorizzati</p>
+                  </div>
+                  <div class="thread-meta">
+                    <span class="tag">Bozza interna</span>
+                    <small>24 apr 2026 · 17:22</small>
+                  </div>
+                </button>
+                <button class="thread-card">
+                  <div>
+                    <strong>Policy trasferte e spese</strong>
+                    <p>Oggetto: approvazione finale CFO e pubblicazione documento</p>
+                  </div>
+                  <div class="thread-meta">
+                    <span class="tag success">Chiusura vicina</span>
+                    <small>23 apr 2026 · 09:08</small>
+                  </div>
+                </button>
+              </div>
+            </article>
+
+            <article class="card thread-panel" data-tour-anchor="repository-thread">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Thread task</p>
+                  <h3>Rinnovo contratto quadro Delta Components</h3>
+                </div>
+                <div class="thread-status">
+                  <span class="badge warning-badge">In attesa cliente</span>
+                  <select class="status-select">
+                    <option>In attesa cliente</option>
+                    <option>In revisione partner</option>
+                    <option>Bozza interna</option>
+                    <option>Chiuso</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="thread-toolbar">
+                <span class="template-chip">Repository: SharePoint / Drive / DMS partner</span>
+                <span class="template-chip">Notifiche: mail, in-app, WhatsApp</span>
+              </div>
+
+              <div class="thread-summary">
+                <div class="priority-card">
+                  <span>Stato</span>
+                  <strong>In attesa cliente</strong>
+                  <p>Ultimo messaggio ricevuto il 25 aprile 2026 alle 10:41.</p>
+                </div>
+                <div class="priority-card">
+                  <span>Allegati</span>
+                  <strong>2 file</strong>
+                  <p>Contratto firmato e riepilogo SLA disponibili nel fascicolo.</p>
+                </div>
+              </div>
+
+              <div class="message-feed">
+                <div class="message-bubble incoming">
+                  <div class="message-head">
+                    <strong>Operations CARE Manufacturing</strong>
+                    <small>25 aprile 2026 · 09:14</small>
+                  </div>
+                  <p>Abbiamo bisogno di capire se rinnovare il contratto quadro o inviare disdetta. Allego l’ultima versione firmata e il riepilogo SLA.</p>
+                  <div class="message-attachments">
+                    <span class="attachment-pill">Contratto_quadro_Delta_2025.pdf</span>
+                    <span class="attachment-pill">SLA_fornitura_Q1.xlsx</span>
+                  </div>
+                </div>
+
+                <div class="message-bubble outgoing">
+                  <div class="message-head">
+                    <strong>Partner legale</strong>
+                    <small>25 aprile 2026 · 10:02</small>
+                  </div>
+                  <p>Ho rilevato una clausola penali senza cap economico. Prima del rinnovo suggerisco conferma interna su volumi e margini oppure una richiesta di modifica alla controparte.</p>
+                </div>
+
+                <div class="message-bubble incoming">
+                  <div class="message-head">
+                    <strong>Operations CARE Manufacturing</strong>
+                    <small>25 aprile 2026 · 10:41</small>
+                  </div>
+                  <p>Ricevuto. Inserisco il task in approvazione acquisti e CFO. Appena abbiamo feedback ti chiediamo eventuale revisione finale.</p>
+                </div>
+              </div>
+
+              <div class="composer-box">
+                <div class="composer-grid form-grid">
+                  <label class="full">
+                    Oggetto
+                    <input value="Rinnovo contratto quadro Delta Components" />
+                  </label>
+                  <label class="full">
+                    Messaggio
+                    <textarea rows="5">Propongo di mantenere aperto il thread fino a conferma interna. Se la controparte chiede modifiche su penali o responsabilità, apriamo revisione specialistica.</textarea>
+                  </label>
+                </div>
+                <div class="composer-footer">
+                  <div class="composer-meta">
+                    <span class="attachment-pill">+ Allega file</span>
+                    <span class="attachment-pill">Template risposta</span>
+                    <span class="attachment-pill">Cambia stato</span>
+                  </div>
+                  <div class="draft-footer">
+                    <button class="ghost-button">Salva bozza</button>
+                    <button class="primary-button">Invia messaggio</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Documenti in repository</p>
+                  <h3>Esempi di fascicoli e allegati</h3>
+                </div>
+                <span class="badge success">Sincronizzati</span>
+              </div>
+              <div class="doc-list">
+                <div class="doc-row">
+                  <div>
+                    <strong>Contratto_quadro_Delta_2025.pdf</strong>
+                    <p>Cartella: Contratti / Fornitori strategici / Delta Components</p>
+                  </div>
+                  <span>12 apr 2025 · PDF</span>
+                </div>
+                <div class="doc-row">
+                  <div>
+                    <strong>SLA_fornitura_Q1.xlsx</strong>
+                    <p>Cartella: Allegati tecnici / Delta Components</p>
+                  </div>
+                  <span>18 apr 2026 · XLSX</span>
+                </div>
+                <div class="doc-row">
+                  <div>
+                    <strong>Nomina_Payroll_Cloud_v3.docx</strong>
+                    <p>Cartella: Privacy / Fornitori con accesso dati</p>
+                  </div>
+                  <span>2 mar 2026 · DOCX</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Regole di notifica</p>
+                  <h3>Trigger operativi configurabili</h3>
+                </div>
+                <span class="badge">Audit ready</span>
+              </div>
+              <div class="task-list">
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Mail</strong>
+                    <p>Invio automatico per nuove richieste, approvazioni e messaggi con allegati.</p>
+                  </div>
+                  <span class="tag">Attivo</span>
+                </div>
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>In-app</strong>
+                    <p>Notifica istantanea su task assegnati, stato cambiato e documenti caricati.</p>
+                  </div>
+                  <span class="tag success">Attivo</span>
+                </div>
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>WhatsApp</strong>
+                    <p>Usato solo per alert urgenti o scadenze entro 48 ore.</p>
+                  </div>
+                  <span class="tag warning">Config</span>
+                </div>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="panel" id="contract-detail">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Scheda contratto</p>
+              <h2>Contratto quadro di fornitura - Delta Components</h2>
+            </div>
+            <span class="badge warning-badge">Attenzione richiesta</span>
+          </div>
+
+          <section class="content-grid">
+            <article class="card" data-tour-anchor="contract-detail-card">
+              <div class="detail-grid">
+                <div class="detail-item">
+                  <span>Stato</span>
+                  <strong>Attivo con rinnovo automatico</strong>
+                </div>
+                <div class="detail-item">
+                  <span>Decorrenza</span>
+                  <strong>1 maggio 2025</strong>
+                </div>
+                <div class="detail-item">
+                  <span>Scadenza</span>
+                  <strong>30 aprile 2026</strong>
+                </div>
+                <div class="detail-item">
+                  <span>Prossimo step</span>
+                  <strong>Decidere rinnovo o inviare disdetta entro il 20 aprile 2026</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Rischi chiave</p>
+                  <h3>Clausole critiche</h3>
+                </div>
+              </div>
+              <div class="clause-list">
+                <div class="clause-item high">
+                  <strong>Penali senza limite economico</strong>
+                  <p>Espone l’azienda a un costo non prevedibile in caso di ritardi su consegne critiche.</p>
+                  <span class="clause-meta">Escalation consigliata: revisione partner legale</span>
+                </div>
+                <div class="clause-item medium">
+                  <strong>Rinnovo tacito</strong>
+                  <p>Manca un workflow interno di conferma prima della data di rinnovo.</p>
+                  <span class="clause-meta">Azione interna: conferma o disdetta entro il 20 aprile 2026</span>
+                </div>
+                <div class="clause-item">
+                  <strong>Foro competente Milano</strong>
+                  <p>Coerente con lo standard aziendale e con i contratti quadro fornitori.</p>
+                  <span class="clause-meta">Nessuna escalation richiesta</span>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Documenti collegati</p>
+                  <h3>Materiale disponibile</h3>
+                </div>
+              </div>
+              <div class="doc-list">
+                <div class="doc-row">
+                  <div>
+                    <strong>Contratto firmato</strong>
+                    <p>Versione esecutiva firmata digitalmente il 12 aprile 2025</p>
+                  </div>
+                  <span>PDF</span>
+                </div>
+                <div class="doc-row">
+                  <div>
+                    <strong>Allegato tecnico e livelli di servizio</strong>
+                    <p>Specifiche componenti, tolleranze e KPI di consegna concordati</p>
+                  </div>
+                  <span>XLSX</span>
+                </div>
+                <div class="doc-row">
+                  <div>
+                    <strong>Storico revisioni</strong>
+                    <p>Tre revisioni salvate in archivio</p>
+                  </div>
+                  <span>LOG</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Azioni</p>
+                  <h3>Workflow consigliato</h3>
+                </div>
+              </div>
+              <div class="task-list">
+                <div class="task-item">
+                  <div>
+                    <strong>Apri bozza di rinnovo</strong>
+                    <p>Usa il template standard per creare la proposta aggiornata da condividere con acquisti.</p>
+                  </div>
+                  <button class="tag clickable-task" data-panel-target="contracts">Apri</button>
+                </div>
+                <div class="task-item">
+                  <div>
+                    <strong>Conferma decisione interna</strong>
+                    <p>Acquisti e operations devono confermare rinnovo o disdetta entro il 20 aprile 2026.</p>
+                  </div>
+                  <span class="tag warning">Urgente</span>
+                </div>
+                <div class="task-item">
+                  <div>
+                    <strong>Richiedi revisione specialistica</strong>
+                    <p>Attivala solo se la controparte contesta penali, SLA o limitazione di responsabilità.</p>
+                  </div>
+                  <button class="primary-button small-button">Apri richiesta</button>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Log attività</p>
+                <h3>Tracciabilità del contratto</h3>
+              </div>
+            </div>
+            <div class="audit-trail">
+              <div class="audit-item">
+                <strong>12 aprile 2025</strong>
+                <p>Contratto firmato digitalmente e archiviato.</p>
+              </div>
+              <div class="audit-item">
+                <strong>3 febbraio 2026</strong>
+                <p>Segnalata clausola penali senza cap economico nel monitoraggio rischi.</p>
+              </div>
+              <div class="audit-item">
+                <strong>18 aprile 2026</strong>
+                <p>Aperta task interna per decidere rinnovo o disdetta.</p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel" id="deadlines">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Presidio operativo</p>
+              <h2>Scadenze e rinnovi sotto controllo</h2>
+            </div>
+          </div>
+
+          <div class="timeline" data-tour-anchor="deadlines-timeline">
+            <div class="timeline-item urgent">
+              <div>
+                <strong>30 aprile 2026</strong>
+                <p>Rinnovo accordo riservatezza con Delta Components</p>
+              </div>
+              <span>5 giorni</span>
+            </div>
+            <div class="timeline-item">
+              <div>
+                <strong>8 maggio 2026</strong>
+                <p>Revisione nomine privacy fornitori con accesso dati</p>
+              </div>
+              <span>13 giorni</span>
+            </div>
+            <div class="timeline-item">
+              <div>
+                <strong>21 maggio 2026</strong>
+                <p>Verifica rinnovo polizza D&O e delibera interna</p>
+              </div>
+              <span>26 giorni</span>
+            </div>
+            <div class="timeline-item">
+              <div>
+                <strong>31 maggio 2026</strong>
+                <p>Aggiornamento lettere incarico consulenti esterni</p>
+              </div>
+              <span>36 giorni</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="compliance">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Checklist</p>
+              <h2>Compliance base per attività ricorrenti</h2>
+            </div>
+          </div>
+
+          <div class="compliance-list" data-tour-anchor="compliance-list">
+            <div class="compliance-item complete">
+              <div>
+                <strong>Informative privacy dipendenti</strong>
+                <p>Ultimo aggiornamento febbraio 2026</p>
+              </div>
+              <span>Completato</span>
+            </div>
+            <div class="compliance-item progress" data-progress="86">
+              <div>
+                <strong>Registro fornitori con accesso dati</strong>
+                <p>2 documenti mancanti su 14 fornitori</p>
+              </div>
+              <span>86%</span>
+            </div>
+            <div class="compliance-item pending" data-progress="92">
+              <div>
+                <strong>Policy trasferte e spese</strong>
+                <p>Bozza pronta, manca approvazione finale</p>
+              </div>
+              <span>92%</span>
+            </div>
+            <div class="compliance-item pending" data-progress="61">
+              <div>
+                <strong>Verifica template contratti consulenti</strong>
+                <p>Richiesta uniformazione clausole riservatezza</p>
+              </div>
+              <span>61%</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="risks">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Analisi automatica</p>
+              <h2>Rischi leggibili dal management</h2>
+            </div>
+          </div>
+
+          <div class="risk-grid" data-tour-anchor="risks-grid">
+            <article class="risk-card high">
+              <span>Alto</span>
+              <h3>Penali sbilanciate su supply agreement</h3>
+              <p>Il contratto prevede penali unidirezionali senza cap economico.</p>
+            </article>
+            <article class="risk-card medium">
+              <span>Medio</span>
+              <h3>Rinnovi automatici non centralizzati</h3>
+              <p>Due contratti si rinnovano senza workflow interno di conferma.</p>
+            </article>
+            <article class="risk-card partner-risk">
+              <span>Partner</span>
+              <h3>Richiesta ideale per consulenza</h3>
+              <p>Revisione limitazione responsabilità e negoziazione penali sul supply agreement.</p>
+            </article>
+          </div>
+
+          <section class="card">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Escalation</p>
+                <h3>Richieste specialistiche suggerite</h3>
+              </div>
+            </div>
+            <div class="task-list">
+              <div class="task-item">
+                <div>
+                  <strong>Validazione clausole critiche</strong>
+                  <p>Richiedi una revisione concentrata su penali, responsabilità e recesso.</p>
+                </div>
+                <button class="primary-button small-button">Richiedi revisione</button>
+              </div>
+              <div class="task-item">
+                <div>
+                  <strong>Supporto negoziazione controparte</strong>
+                  <p>Attivabile se Delta Components propone modifiche fuori policy.</p>
+                </div>
+                <button class="ghost-button">Coinvolgi partner</button>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel" id="partner" data-tour-anchor="partner-overview">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Modalità consulente</p>
+              <h2>Vista partner legale su più aziende</h2>
+            </div>
+            <span class="badge dark">3 aziende presidiate</span>
+          </div>
+
+          <section class="content-grid">
+            <article class="card" data-tour-anchor="partner-workspace">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Workspace operativo</p>
+                  <h3>Inbox condivisa su tutte le aziende</h3>
+                </div>
+                <span class="badge warning-badge">7 item</span>
+              </div>
+              <div class="workspace-tabs">
+                <button class="workspace-tab active">Inbox</button>
+                <button class="workspace-tab">Urgenti</button>
+                <button class="workspace-tab">Priorità</button>
+                <button class="workspace-tab">In attesa</button>
+              </div>
+              <div class="task-list">
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>CARE Manufacturing · Rinnovo Delta Components</strong>
+                    <p>Messaggio in ingresso con allegati da verificare. Scadenza entro 5 giorni.</p>
+                  </div>
+                  <span class="tag warning">Urgente</span>
+                </div>
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>NordFood Services · Provider payroll</strong>
+                    <p>Nuova richiesta cliente su nomina privacy e allegati mancanti.</p>
+                  </div>
+                  <span class="tag">Inbox</span>
+                </div>
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Linea Distribuzione · Procure commerciali</strong>
+                    <p>Attività prioritaria da chiudere prima della nomina del nuovo direttore.</p>
+                  </div>
+                  <span class="tag success">Priorità</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Vista aggregata</p>
+                  <h3>Urgenze e priorità del partner</h3>
+                </div>
+                <span class="badge dark">Live</span>
+              </div>
+              <div class="priority-board">
+                <div class="priority-card">
+                  <span>Inbox</span>
+                  <strong>3</strong>
+                  <p>Comunicazioni in ingresso non lette da clienti attivi.</p>
+                </div>
+                <div class="priority-card">
+                  <span>Urgenti</span>
+                  <strong>2</strong>
+                  <p>Scadenze entro 7 giorni con impatto su rinnovi o adempimenti.</p>
+                </div>
+                <div class="priority-card">
+                  <span>Priorità</span>
+                  <strong>4</strong>
+                  <p>Task ad alta rilevanza operativa o negoziale.</p>
+                </div>
+                <div class="priority-card">
+                  <span>Escalation</span>
+                  <strong>1</strong>
+                  <p>Richiesta pronta per revisione specialistica.</p>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card" data-tour-anchor="partner-projects">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Progetti azienda</p>
+                  <h3>Ogni azienda è un progetto</h3>
+                </div>
+                <span class="badge">Selezione attiva</span>
+              </div>
+              <div class="thread-list">
+                <button class="thread-card active-thread">
+                  <div>
+                    <strong>CARE Manufacturing S.r.l.</strong>
+                    <p>Contratti, repository, task, scadenze, rischi e comunicazioni cliente.</p>
+                  </div>
+                  <div class="thread-meta">
+                    <span class="tag success">Attiva</span>
+                    <small>79/100 score</small>
+                  </div>
+                </button>
+                <button class="thread-card">
+                  <div>
+                    <strong>NordFood Services S.p.A.</strong>
+                    <p>Privacy fornitori, payroll provider e documentazione dipendenti.</p>
+                  </div>
+                  <div class="thread-meta">
+                    <span class="tag">Attiva</span>
+                    <small>83/100 score</small>
+                  </div>
+                </button>
+                <button class="thread-card">
+                  <div>
+                    <strong>Linea Distribuzione S.r.l.</strong>
+                    <p>Governance societaria, procure, deleghe e contratti distributivi.</p>
+                  </div>
+                  <div class="thread-meta">
+                    <span class="tag">Attiva</span>
+                    <small>75/100 score</small>
+                  </div>
+                </button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Progetto selezionato</p>
+                  <h3>CARE Manufacturing S.r.l.</h3>
+                </div>
+                <span class="badge dark">Vista progetto</span>
+              </div>
+              <div class="maturity-list">
+                <div class="maturity-row">
+                  <div>
+                    <strong>Repository</strong>
+                    <p>18 documenti attivi, 3 thread aperti, 2 allegati in revisione</p>
+                  </div>
+                  <span>Live</span>
+                </div>
+                <div class="maturity-row">
+                  <div>
+                    <strong>Scadenze</strong>
+                    <p>Rinnovo Delta Components e provider HR cloud da presidiare</p>
+                  </div>
+                  <span>2</span>
+                </div>
+                <div class="maturity-row">
+                  <div>
+                    <strong>Rischi</strong>
+                    <p>Penali senza cap economico e rinnovo tacito non centralizzato</p>
+                  </div>
+                  <span>2</span>
+                </div>
+                <div class="maturity-row">
+                  <div>
+                    <strong>Comunicazioni</strong>
+                    <p>1 messaggio cliente in ingresso, 1 risposta partner in bozza</p>
+                  </div>
+                  <span>Open</span>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Focus rapido</p>
+                  <h3>Cosa fare oggi sul portfolio</h3>
+                </div>
+                <span class="badge">Today</span>
+              </div>
+              <div class="task-list">
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Rispondi a CARE Manufacturing</strong>
+                    <p>Thread rinnovo Delta Components con allegati da confermare.</p>
+                  </div>
+                  <span class="tag warning">Inbox</span>
+                </div>
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Chiudi review privacy NordFood</strong>
+                    <p>Nomina provider payroll da validare oggi.</p>
+                  </div>
+                  <span class="tag">Scadenza</span>
+                </div>
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Apri task governance Linea Distribuzione</strong>
+                    <p>Procure e deleghe operative prima della nomina commerciale.</p>
+                  </div>
+                  <span class="tag success">Priorità</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Metriche lavoro</p>
+                  <h3>Carico operativo partner</h3>
+                </div>
+                <span class="badge dark">This week</span>
+              </div>
+              <div class="template-library">
+                <div class="template-chip">11 review aperte</div>
+                <div class="template-chip">6 messaggi inviati</div>
+                <div class="template-chip">4 attese cliente</div>
+                <div class="template-chip">2 task chiusi oggi</div>
+              </div>
+            </article>
+          </section>
+
+          <section class="stats-grid">
+            <article class="stat-card">
+              <span>Aziende attive</span>
+              <strong>3</strong>
+              <p>Manufacturing, food services e distribuzione tecnica.</p>
+            </article>
+            <article class="stat-card">
+              <span>Escalation aperte</span>
+              <strong>4</strong>
+              <p>2 contrattuali, 1 privacy, 1 governance societaria.</p>
+            </article>
+            <article class="stat-card">
+              <span>Revisioni this month</span>
+              <strong>11</strong>
+              <p>Interventi su casi non standard con priorità qualificata.</p>
+            </article>
+            <article class="stat-card">
+              <span>Opportunità attive</span>
+              <strong>2</strong>
+              <p>Possibili estensioni verso compliance privacy e governance.</p>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Portafoglio</p>
+                  <h3>Aziende seguite</h3>
+                </div>
+              </div>
+              <div class="doc-list">
+                <div class="doc-row">
+                  <div>
+                    <strong>CARE Manufacturing S.r.l.</strong>
+                    <p>2 escalation aperte, 79/100 operational score</p>
+                  </div>
+                  <span>Attiva</span>
+                </div>
+                <div class="doc-row">
+                  <div>
+                    <strong>NordFood Services S.p.A.</strong>
+                    <p>1 escalation privacy, 83/100 operational score</p>
+                  </div>
+                  <span>Attiva</span>
+                </div>
+                <div class="doc-row">
+                  <div>
+                    <strong>Linea Distribuzione S.r.l.</strong>
+                    <p>1 tema governance e procure, 75/100 operational score</p>
+                  </div>
+                  <span>Attiva</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Casi qualificati</p>
+                  <h3>Dove entra il professionista</h3>
+                </div>
+              </div>
+              <div class="audit-trail">
+                <div class="audit-item">
+                  <strong>CARE Manufacturing</strong>
+                  <p>Supply agreement con penali non capped e responsabilità non limitata.</p>
+                </div>
+                <div class="audit-item">
+                  <strong>NordFood Services</strong>
+                  <p>Nomine privacy da rivedere su software provider con accesso ai dati dipendenti.</p>
+                </div>
+                <div class="audit-item">
+                  <strong>Linea Distribuzione</strong>
+                  <p>Revisione procure e aggiornamento deleghe operative per nuovo direttore commerciale.</p>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card" data-tour-anchor="partner-comms">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Comunicazioni partner-cliente</p>
+                  <h3>Workspace condiviso al posto delle email</h3>
+                </div>
+                <span class="badge dark">Tracciato</span>
+              </div>
+              <div class="comms-grid">
+                <div class="comms-item">
+                  <strong>Sostituisce il flusso mail</strong>
+                  <p>Richieste del cliente, risposte del partner, invio documenti e feedback vivono in un unico spazio operativo condiviso.</p>
+                </div>
+                <div class="comms-item">
+                  <strong>Repository documentale integrabile</strong>
+                  <p>La repository può essere configurata in base alle implementazioni tecnologiche e ai software già usati dal partner.</p>
+                </div>
+                <div class="comms-item">
+                  <strong>Notifiche configurabili per il cliente</strong>
+                  <p>Mail, notifiche in-app e WhatsApp possono essere attivati per scadenze, richieste di revisione e nuovi documenti disponibili.</p>
+                </div>
+                <div class="comms-item">
+                  <strong>Storico registrato e tracciato</strong>
+                  <p>Tutte le comunicazioni restano registrate, con audit trail, riferimenti al contratto e cronologia delle azioni svolte.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Repository e notifiche</p>
+                  <h3>Configurazione lato partner</h3>
+                </div>
+                <span class="badge">Setup flessibile</span>
+              </div>
+              <div class="task-list">
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Repository documenti</strong>
+                    <p>Configurabile su stack partner e procedure cliente.</p>
+                  </div>
+                  <span class="tag">Config</span>
+                </div>
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Canali notifica</strong>
+                    <p>Mail, in-app, WhatsApp con regole per priorità e destinatari.</p>
+                  </div>
+                  <span class="tag success">Attivi</span>
+                </div>
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Audit trail</strong>
+                    <p>Ogni scambio è registrato e consultabile a fini operativi e probatori.</p>
+                  </div>
+                  <span class="tag warning">Presidio</span>
+                </div>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="panel" id="reports">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Executive reporting</p>
+              <h2>Report leggibile per CEO, CFO e partner legale</h2>
+            </div>
+            <span class="badge">Q2 2026</span>
+          </div>
+
+          <section class="content-grid">
+            <article class="card" data-tour-anchor="reports-summary">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Sintesi</p>
+                  <h3>Executive report</h3>
+                </div>
+              </div>
+              <div class="report-summary">
+                <p><strong>Stato generale:</strong> presidio operativo buono, con due aree che richiedono attenzione entro 10 giorni.</p>
+                <p><strong>Contratti sensibili:</strong> 1 contratto quadro di fornitura con rischio alto su penali e limitazione di responsabilità.</p>
+                <p><strong>Adempimenti aperti:</strong> completamento dossier privacy provider HR cloud e conferma rinnovo Delta Components.</p>
+                <p><strong>Richieste partner suggerite:</strong> revisione clausole critiche e supporto negoziazione su controparte strategica.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Export</p>
+                  <h3>Formati disponibili</h3>
+                </div>
+              </div>
+              <div class="template-library">
+                <div class="template-chip">Board summary PDF</div>
+                <div class="template-chip">Risk report DOCX</div>
+                <div class="template-chip">Scadenzario XLSX</div>
+                <div class="template-chip">Partner brief PDF</div>
+              </div>
+              <div class="draft-footer">
+                <button class="primary-button">Esporta PDF</button>
+                <button class="ghost-button">Invia al management</button>
+              </div>
+            </article>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <div class="tour-overlay hidden" id="tour-overlay">
+      <div class="tour-spotlight" id="tour-spotlight"></div>
+      <div class="tour-popover" id="tour-popover">
+        <p class="eyebrow">Guida demo</p>
+        <h3 id="tour-title">Step title</h3>
+        <p id="tour-text">Step text</p>
+        <div class="tour-actions">
+          <span id="tour-progress">1 / 5</span>
+          <button class="ghost-button" id="tour-prev">Indietro</button>
+          <button class="primary-button" id="tour-next">Avanti</button>
+          <button class="ghost-button" id="tour-close">Chiudi guida</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
