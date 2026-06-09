@@ -98,29 +98,24 @@
           </div>
 
           <nav class="nav">
-            <button class="nav-item nav-company active" data-panel="overview">Panoramica</button>
+            <button class="nav-item nav-company active" data-panel="overview">Home</button>
             <button class="nav-item nav-company" data-panel="contracts">Contratti</button>
             <button class="nav-item nav-company" data-panel="deadlines">Sofferenze</button>
             <button class="nav-item nav-company" data-panel="compliance">Debitori</button>
-            <button class="nav-item nav-company nav-emphasis" data-panel="repository">Repository</button>
-            <button class="nav-item nav-company" data-panel="risks">Azioni legali</button>
-            <button class="nav-item nav-company" data-panel="reports">Report</button>
-            <button class="nav-item nav-partner" data-panel="partner">Workspace</button>
+            <button class="nav-item nav-company nav-emphasis" data-panel="repository">Messaggi</button>
+            <button class="nav-item nav-partner active" data-panel="partner">Clienti</button>
             <button class="nav-item nav-partner" data-panel="contracts">Contratti</button>
             <button class="nav-item nav-partner" data-panel="deadlines">Sofferenze</button>
-            <button class="nav-item nav-partner nav-emphasis" data-panel="repository">Repository</button>
-            <button class="nav-item nav-partner" data-panel="risks">Azioni</button>
-            <button class="nav-item nav-partner" data-panel="contract-detail">Caso attivo</button>
-            <button class="nav-item nav-partner" data-panel="reports">Report</button>
+            <button class="nav-item nav-partner nav-emphasis" data-panel="repository">Messaggi</button>
+            <button class="nav-item nav-partner" data-panel="compliance">Debitori</button>
           </nav>
         </div>
 
         <section class="sidebar-card">
           <p class="eyebrow" id="sidebar-eyebrow">Posizionamento</p>
-          <h3 id="sidebar-title">Servizi legali strutturati, non richieste sparse</h3>
+          <h3 id="sidebar-title">2 aree di lavoro, 1 canale messaggi</h3>
           <p id="sidebar-text">
-            La piattaforma organizza contratti e recupero crediti in moduli chiari. Il partner lavora
-            per pratica, per azienda e per tipo di debitore con comunicazioni sempre tracciate.
+            Contratti, posizioni in sofferenza e scambio tracciato tra cliente e partner.
           </p>
         </section>
       </aside>
@@ -144,287 +139,77 @@
         <section class="panel active" id="overview">
           <section class="hero" data-tour-anchor="overview-hero">
             <div>
-              <p class="eyebrow">MVP operativo</p>
-              <h2>Gestisci contratti e posizioni in sofferenza nello stesso ambiente.</h2>
-              <p class="hero-copy">
-                L’azienda presidia i contratti con enti privati, segue i fascicoli di recupero crediti
-                e distingue chiaramente i casi su persone fisiche da quelli su persone giuridiche.
-              </p>
+              <p class="eyebrow">Vista azienda</p>
+              <h2>Due aree principali.</h2>
+              <p class="hero-copy">Contratti. Posizioni in sofferenza. Tutto il resto vive dentro i fascicoli.</p>
             </div>
             <div class="hero-card">
-              <span>Pratiche aperte</span>
-              <strong>42</strong>
-              <p>18 contratti attivi, 24 posizioni in sofferenza. Due pratiche richiedono azione entro 72 ore.</p>
+              <span>Aperte oggi</span>
+              <strong>5</strong>
+              <p>2 contratti da rivedere, 3 posizioni in sofferenza da muovere.</p>
             </div>
           </section>
 
           <section class="quick-actions">
             <button class="action-tile" data-panel-target="contracts">
-              <strong>Apri area contratti</strong>
-              <p>Genera bozze standard e controlla stato, allegati e rinnovi.</p>
+              <strong>Contratti</strong>
+              <p>Nuova richiesta, Sofia, revisione partner, approvato per uso.</p>
             </button>
             <button class="action-tile" data-panel-target="deadlines">
-              <strong>Apri sofferenze</strong>
-              <p>Vedi le pratiche di recupero crediti ordinate per urgenza, importo e stato.</p>
+              <strong>Posizioni in sofferenza</strong>
+              <p>Recupero crediti, importi, stato pratica, tipo di debitore.</p>
             </button>
-            <button class="action-tile" data-panel-target="compliance">
-              <strong>Segmenta i debitori</strong>
-              <p>Separa persone fisiche e giuridiche per guidare il flusso corretto.</p>
+            <button class="action-tile" data-panel-target="repository">
+              <strong>Messaggi</strong>
+              <p>Cliente e partner si scambiano note, file e aggiornamenti dentro i task.</p>
             </button>
-          </section>
-
-          <section class="content-grid notification-layout">
-            <article class="card" data-tour-anchor="overview-alerts">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Centro notifiche</p>
-                  <h3>Cosa richiede attenzione</h3>
-                </div>
-                <span class="badge warning-badge">3 alert</span>
-              </div>
-              <div class="notification-list">
-                <button class="notification-item" data-panel-target="deadlines">
-                  <strong>Pratica in sofferenza oltre 60 giorni</strong>
-                  <p>Officine Delta S.r.l. ha 18.400 euro scaduti e documentazione pronta per sollecito formale.</p>
-                </button>
-                <button class="notification-item" data-panel-target="contracts">
-                  <strong>Contratto in rinnovo</strong>
-                  <p>Il contratto quadro con Delta Components richiede decisione interna prima del rinnovo automatico.</p>
-                </button>
-                <button class="notification-item" data-panel-target="compliance">
-                  <strong>Debitore da classificare</strong>
-                  <p>Nuova posizione da 6.200 euro su persona fisica da indirizzare sul flusso corretto.</p>
-                </button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Scoring</p>
-                  <h3>Copertura del servizio</h3>
-                </div>
-                <span class="badge success">MVP attivo</span>
-              </div>
-              <div class="maturity-list">
-                <div class="maturity-row">
-                  <div>
-                    <strong>Area contratti</strong>
-                    <p>Bozze, rinnovi, fascicoli e thread operativi attivi</p>
-                  </div>
-                  <span>18</span>
-                </div>
-                <div class="maturity-row">
-                  <div>
-                    <strong>Recupero crediti</strong>
-                    <p>Posizioni monitorate con importo, stato e prossima azione</p>
-                  </div>
-                  <span>24</span>
-                </div>
-                <div class="maturity-row">
-                  <div>
-                    <strong>Persone fisiche</strong>
-                    <p>Pratiche separate per solleciti, piani di rientro e documenti</p>
-                  </div>
-                  <span>9</span>
-                </div>
-                <div class="maturity-row">
-                  <div>
-                    <strong>Persone giuridiche</strong>
-                    <p>Posizioni gestite con fascicolo azienda, PEC e atti pronti</p>
-                  </div>
-                  <span>15</span>
-                </div>
-              </div>
-            </article>
           </section>
 
           <section class="stats-grid">
             <article class="stat-card">
-              <span>Contratti attivi</span>
-              <strong>18</strong>
-              <p>8 fornitura, 4 servizi, 3 consulenza, 3 NDA con fascicoli aggiornati.</p>
+              <span>Contratti</span>
+              <strong>2</strong>
+              <p>1 in revisione partner, 1 approvato per uso.</p>
             </article>
             <article class="stat-card">
-              <span>Posizioni in sofferenza</span>
-              <strong>24</strong>
-              <p>9 persone fisiche, 15 persone giuridiche con stato e importo tracciati.</p>
+              <span>Sofferenze</span>
+              <strong>3</strong>
+              <p>2 persone giuridiche, 1 persona fisica.</p>
             </article>
             <article class="stat-card">
-              <span>Valore esposto</span>
-              <strong>€128k</strong>
-              <p>Totale delle pratiche di recupero crediti aperte nel workspace azienda.</p>
-            </article>
-            <article class="stat-card">
-              <span>Pratiche urgenti</span>
+              <span>Messaggi aperti</span>
               <strong>4</strong>
-              <p>2 rinnovi contrattuali e 2 solleciti pronti per invio formale o escalation.</p>
+              <p>Thread attivi tra azienda e partner.</p>
+            </article>
+            <article class="stat-card">
+              <span>Urgenti</span>
+              <strong>2</strong>
+              <p>1 bozza contratto, 1 sollecito da inviare.</p>
             </article>
           </section>
-
           <section class="content-grid">
             <article class="card">
               <div class="section-head">
                 <div>
-                  <p class="eyebrow">Operazioni</p>
-                  <h3>Cosa fare oggi</h3>
+                  <p class="eyebrow">Contratti</p>
+                  <h3>Esempi</h3>
                 </div>
-                <span class="badge">4 task</span>
               </div>
               <div class="task-list">
-                <div class="task-item">
-                  <div>
-                    <strong>Valuta rinnovo contratto quadro Delta Components</strong>
-                    <p>Scade il 30 aprile 2026. Verifica se confermare il rinnovo o inviare disdetta entro il 20 aprile.</p>
-                  </div>
-                  <button class="tag warning clickable-task" data-panel-target="contracts">Apri</button>
-                </div>
-                <div class="task-item">
-                  <div>
-                    <strong>Invia secondo sollecito a Officine Delta S.r.l.</strong>
-                    <p>Importo scaduto 18.400 euro, documenti pronti e nessun riscontro dopo il primo contatto.</p>
-                  </div>
-                  <button class="tag clickable-task" data-panel-target="deadlines">Apri</button>
-                </div>
-                <div class="task-item">
-                  <div>
-                    <strong>Classifica nuova pratica da Retail Nova</strong>
-                    <p>Verificare se il debitore è persona giuridica e se esiste contratto firmato in repository.</p>
-                  </div>
-                  <button class="tag success clickable-task" data-panel-target="compliance">Apri</button>
-                </div>
+                <div class="task-item compact-row"><div><strong>NDA Beta Logistics</strong><p>In revisione partner</p></div><span class="tag warning">Review</span></div>
+                <div class="task-item compact-row"><div><strong>Fornitura Delta Components</strong><p>Approvato per uso</p></div><span class="tag success">Ok</span></div>
               </div>
             </article>
-
             <article class="card">
               <div class="section-head">
                 <div>
-                  <p class="eyebrow">Documenti</p>
-                  <h3>Archivio essenziale</h3>
+                  <p class="eyebrow">Sofferenze</p>
+                  <h3>Esempi</h3>
                 </div>
-                <span class="badge dark">Sempre accessibile</span>
-              </div>
-              <div class="doc-list">
-                <div class="doc-row">
-                  <div>
-                    <strong>Contratto quadro di fornitura - Delta Components</strong>
-                    <p>Ultima versione firmata il 12 aprile 2025</p>
-                  </div>
-                  <button class="link-button" data-panel-target="contract-detail">Apri scheda</button>
-                </div>
-                <div class="doc-row">
-                  <div>
-                    <strong>Sollecito_Officine_Delta_v2.docx</strong>
-                    <p>Bozza aggiornata il 12 maggio 2026</p>
-                  </div>
-                  <span>DOCX</span>
-                </div>
-                <div class="doc-row">
-                  <div>
-                    <strong>Estratto conto partite aperte - NordCargo</strong>
-                    <p>Caricato il 10 maggio 2026</p>
-                  </div>
-                  <span>XLSX</span>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <section class="content-grid">
-            <article class="card" data-tour-anchor="company-comms">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Comunicazioni cliente</p>
-                  <h3>Canale tracciato al posto delle mail sparse</h3>
-                </div>
-                <span class="badge">Omnicanale</span>
-              </div>
-              <div class="comms-grid">
-                <div class="comms-item">
-                  <strong>Thread operativi centralizzati</strong>
-                  <p>Richieste, approvazioni, solleciti, invii documenti e risposte del partner vengono gestiti qui invece che via mail destrutturate.</p>
-                </div>
-                <div class="comms-item">
-                  <strong>Repository documentale configurabile</strong>
-                  <p>Contratti, lettere di sollecito, estratti conto e allegati probatori risiedono in una repository collegata e configurabile.</p>
-                </div>
-                <div class="comms-item">
-                  <strong>Notifiche configurabili</strong>
-                  <p>Il cliente può ricevere alert su rinnovi, pratiche in sofferenza e nuove comunicazioni via mail, in-app o WhatsApp.</p>
-                </div>
-                <div class="comms-item">
-                  <strong>Tracciabilità completa</strong>
-                  <p>Tutte le comunicazioni vengono registrate, storicizzate e rese consultabili con data, autore e documento associato.</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Canali attivi</p>
-                  <h3>Configurazione notifiche</h3>
-                </div>
-                <span class="badge success">3 canali</span>
-              </div>
-              <div class="template-library">
-                <div class="template-chip">Mail per scadenze e approvazioni</div>
-                <div class="template-chip">Notifiche in-app per task e documenti</div>
-                <div class="template-chip">WhatsApp per alert urgenti</div>
-                <div class="template-chip">Storico conversazioni per audit</div>
-              </div>
-            </article>
-          </section>
-
-          <section class="content-grid">
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Libreria template</p>
-                  <h3>Documenti standard disponibili</h3>
-                </div>
-                <span class="badge dark">6 template</span>
-              </div>
-              <div class="template-library">
-                <div class="template-chip">NDA / Riservatezza</div>
-                <div class="template-chip">Contratto di fornitura</div>
-                <div class="template-chip">Contratto di servizi</div>
-                <div class="template-chip">Contratto di consulenza</div>
-                <div class="template-chip">Primo sollecito pagamento</div>
-                <div class="template-chip">Piano di rientro</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Partner legale</p>
-                  <h3>Punti di intervento</h3>
-                </div>
-                <span class="badge">3 ingressi</span>
               </div>
               <div class="task-list">
-                <div class="task-item">
-                  <div>
-                    <strong>Validazione finale template</strong>
-                    <p>Verifica la tenuta giuridica dei modelli usati su contratti e lettere di recupero crediti.</p>
-                  </div>
-                  <span class="tag">Standard</span>
-                </div>
-                <div class="task-item">
-                  <div>
-                    <strong>Revisione clausole critiche</strong>
-                    <p>Entra su penali, responsabilità, rinnovi taciti o contestazioni di controparte.</p>
-                  </div>
-                  <span class="tag warning">Critico</span>
-                </div>
-                <div class="task-item">
-                  <div>
-                    <strong>Avvio azione di recupero</strong>
-                    <p>Attivabile quando solleciti e piano di rientro non producono risultato.</p>
-                  </div>
-                  <span class="tag success">On demand</span>
-                </div>
+                <div class="task-item compact-row"><div><strong>Officine Delta</strong><p>18.400 euro</p></div><span class="tag warning">Sollecito</span></div>
+                <div class="task-item compact-row"><div><strong>Privato Rossi</strong><p>2.850 euro</p></div><span class="tag">Contatto</span></div>
               </div>
             </article>
           </section>
@@ -434,9 +219,9 @@
           <div class="section-head">
             <div>
               <p class="eyebrow">Contratti con enti privati</p>
-              <h2>Richiesta guidata, bozza AI e revisione partner</h2>
+              <h2>Sofia prepara la bozza. Il partner revisiona.</h2>
             </div>
-            <span class="badge">Template standard</span>
+            <span class="badge">Sofia AI</span>
           </div>
 
           <section class="contracts-layout">
@@ -444,9 +229,9 @@
               <div class="section-head">
                 <div>
                   <p class="eyebrow">Assistente AI</p>
-                  <h3>Domande guidate per costruire la bozza</h3>
+                  <h3>Sofia</h3>
                 </div>
-                <span class="badge success">Step 2 di 4</span>
+                <span class="badge success">Nuova richiesta</span>
               </div>
               <form id="contract-form" class="form-grid">
                 <label>
@@ -461,7 +246,7 @@
                 </label>
 
                 <label>
-                  Azienda / controparte
+                  Controparte
                   <input name="counterparty" value="Beta Logistics S.r.l." />
                 </label>
 
@@ -471,7 +256,7 @@
                 </label>
 
                 <label>
-                  Foro competente
+                  Foro
                   <input name="jurisdiction" value="Milano" />
                 </label>
 
@@ -481,7 +266,7 @@
                 </label>
 
                 <div class="full">
-                  <p class="field-title">Clausole opzionali</p>
+                  <p class="field-title">Clausole</p>
                   <div class="toggle-grid">
                     <label class="toggle"><input type="checkbox" name="autoRenew" checked /> Rinnovo automatico</label>
                     <label class="toggle"><input type="checkbox" name="penalties" checked /> Penali per ritardo</label>
@@ -491,7 +276,7 @@
                 </div>
 
                 <div class="form-actions full">
-                  <button type="submit" class="primary-button">Genera bozza</button>
+                  <button type="submit" class="primary-button">Genera bozza con Sofia</button>
                   <button type="button" class="ghost-button" id="reset-contract">Reset</button>
                 </div>
               </form>
@@ -501,15 +286,15 @@
               <div class="section-head">
                 <div>
                   <p class="eyebrow">Output</p>
-                  <h3>Bozza contratto</h3>
+                  <h3>Bozza</h3>
                 </div>
                 <span class="badge warning-badge">In revisione partner</span>
               </div>
               <div id="draft-output" class="draft-output"></div>
               <div class="draft-footer">
                 <button class="primary-button">Invia al partner</button>
-                <button class="ghost-button">Salva nel fascicolo</button>
-                <button class="ghost-button accent-ghost">Notifica cliente</button>
+                <button class="ghost-button">Salva</button>
+                <button class="ghost-button accent-ghost">Notifica</button>
               </div>
             </article>
           </section>
@@ -519,36 +304,36 @@
               <div class="section-head">
                 <div>
                   <p class="eyebrow">Workflow stato</p>
-                  <h3>Come evolve il documento</h3>
+                  <h3>Stati</h3>
                 </div>
                 <span class="badge dark">Tracciato</span>
               </div>
               <div class="task-list">
                 <div class="task-item compact-row">
                   <div>
-                    <strong>1. Richiesta aperta</strong>
-                    <p>Il cliente apre una pratica contratto e l’assistente AI raccoglie i dati minimi.</p>
+                    <strong>Richiesta aperta</strong>
+                    <p>Il cliente compila il task.</p>
                   </div>
                   <span class="tag">Avvio</span>
                 </div>
                 <div class="task-item compact-row">
                   <div>
-                    <strong>2. Bozza generata</strong>
-                    <p>La bozza viene costruita sulla base della conoscenza precaricata e salvata nel fascicolo.</p>
+                    <strong>Bozza generata</strong>
+                    <p>Sofia crea la prima versione.</p>
                   </div>
                   <span class="tag success">AI</span>
                 </div>
                 <div class="task-item compact-row">
                   <div>
-                    <strong>3. In revisione partner</strong>
-                    <p>Il partner riceve alert, legge la bozza, aggiunge note e cambia stato o testo.</p>
+                    <strong>In revisione partner</strong>
+                    <p>Il partner rivede e annota.</p>
                   </div>
                   <span class="tag warning">Review</span>
                 </div>
                 <div class="task-item compact-row">
                   <div>
-                    <strong>4. Approvato per uso</strong>
-                    <p>Il cliente riceve notifica e può usare o scaricare il contratto approvato.</p>
+                    <strong>Approvato per uso</strong>
+                    <p>Il cliente riceve notifica.</p>
                   </div>
                   <span class="tag success">Finale</span>
                 </div>
@@ -559,7 +344,7 @@
               <div class="section-head">
                 <div>
                   <p class="eyebrow">Messaggi e note</p>
-                  <h3>Scambio task-style come in Asana</h3>
+                  <h3>Messaggi nel task</h3>
                 </div>
                 <span class="badge">2 livelli</span>
               </div>
@@ -567,21 +352,21 @@
                 <div class="task-item compact-row">
                   <div>
                     <strong>Messaggi condivisi</strong>
-                    <p>Cliente e partner si scambiano richieste, chiarimenti e allegati direttamente dentro la pratica.</p>
+                    <p>Cliente e partner scrivono qui.</p>
                   </div>
                   <span class="tag">Chat</span>
                 </div>
                 <div class="task-item compact-row">
                   <div>
                     <strong>Note interne partner</strong>
-                    <p>Il professionista mantiene osservazioni riservate senza mostrarle al cliente.</p>
+                    <p>Visibili solo al partner.</p>
                   </div>
                   <span class="tag">Interno</span>
                 </div>
                 <div class="task-item compact-row">
                   <div>
-                    <strong>Timeline completa</strong>
-                    <p>Ogni modifica di stato, nota o file resta registrata con data, ora e autore.</p>
+                    <strong>Timeline</strong>
+                    <p>Stati, note e file restano tracciati.</p>
                   </div>
                   <span class="tag success">Audit</span>
                 </div>
@@ -599,19 +384,19 @@
             <div class="audit-trail">
               <div class="audit-item">
                 <strong>25 aprile 2026, 10:12</strong>
-                <p>Richiesta aperta dal cliente e risposte raccolte dall’assistente AI.</p>
+                <p>Richiesta aperta dal cliente.</p>
               </div>
               <div class="audit-item">
                 <strong>25 aprile 2026, 10:19</strong>
-                <p>Bozza generata e salvata nel fascicolo contratti / Delta Components.</p>
+                <p>Sofia genera la bozza.</p>
               </div>
               <div class="audit-item">
                 <strong>25 aprile 2026, 10:24</strong>
-                <p>Alert inviato al partner per revisione su penali e rinnovo automatico.</p>
+                <p>Alert inviato al partner.</p>
               </div>
               <div class="audit-item">
                 <strong>25 aprile 2026, 10:41</strong>
-                <p>Partner aggiunge nota, cambia stato in “revisionato” e notifica il cliente.</p>
+                <p>Partner revisiona e notifica il cliente.</p>
               </div>
             </div>
           </section>
@@ -620,21 +405,18 @@
         <section class="panel" id="repository" data-tour-anchor="repository-hub">
           <div class="section-head">
             <div>
-              <p class="eyebrow">Repository documentale</p>
-              <h2 id="repository-title">Documenti, messaggi e stati in un unico workspace tracciato</h2>
+              <p class="eyebrow">Messaggi</p>
+              <h2 id="repository-title">Task, note e allegati</h2>
             </div>
-            <span class="badge dark" id="repository-badge">Core workflow</span>
+            <span class="badge dark" id="repository-badge">Condiviso</span>
           </div>
-          <p class="hero-copy repository-copy" id="repository-copy">
-            Qui l’azienda gestisce fascicoli, thread, allegati e stati di lavorazione in un unico spazio operativo. Tutto resta tracciato e sostituisce lo scambio dispersivo via mail.
-          </p>
 
           <section class="repository-layout">
             <article class="card">
               <div class="section-head">
                 <div>
-                  <p class="eyebrow">Task attivi</p>
-                  <h3>Comunicazioni aperte</h3>
+                  <p class="eyebrow">Task</p>
+                  <h3>Aperti</h3>
                 </div>
                 <span class="badge">3 thread</span>
               </div>
@@ -690,8 +472,8 @@
               </div>
 
               <div class="thread-toolbar">
-                <span class="template-chip">Repository: SharePoint / Drive / DMS partner</span>
-                <span class="template-chip">Notifiche: mail, in-app, WhatsApp</span>
+                <span class="template-chip">Cliente + partner</span>
+                <span class="template-chip">Stato tracciato</span>
               </div>
 
               <div class="thread-summary">
@@ -740,13 +522,13 @@
               <div class="thread-summary notes-split">
                 <div class="priority-card">
                   <span>Messaggio condiviso</span>
-                  <strong>Visibile a cliente e partner</strong>
-                  <p>Usato per richieste, risposte, allegati e aggiornamenti di stato della pratica.</p>
+                  <strong>Cliente e partner</strong>
+                  <p>Richieste, risposte, allegati.</p>
                 </div>
                 <div class="priority-card">
                   <span>Nota interna partner</span>
-                  <strong>Non visibile al cliente</strong>
-                  <p>Annotazione: verificare margine minimo accettabile prima di approvare rinnovo con penali attuali.</p>
+                  <strong>Solo partner</strong>
+                  <p>Verificare margine minimo prima del rinnovo.</p>
                 </div>
               </div>
 
@@ -764,7 +546,7 @@
                 <div class="composer-footer">
                   <div class="composer-meta">
                     <span class="attachment-pill">+ Allega file</span>
-                    <span class="attachment-pill">Template risposta</span>
+                    <span class="attachment-pill">Risposta rapida</span>
                     <span class="attachment-pill">Cambia stato</span>
                     <span class="attachment-pill">Nota interna</span>
                   </div>
@@ -779,68 +561,18 @@
 
           <section class="content-grid">
             <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Documenti in repository</p>
-                  <h3>Esempi di fascicoli e allegati</h3>
-                </div>
-                <span class="badge success">Sincronizzati</span>
-              </div>
+              <div class="section-head"><div><p class="eyebrow">Allegati</p><h3>Esempi</h3></div></div>
               <div class="doc-list">
-                <div class="doc-row">
-                  <div>
-                    <strong>Contratto_quadro_Delta_2025.pdf</strong>
-                    <p>Cartella: Contratti / Fornitori strategici / Delta Components</p>
-                  </div>
-                  <span>12 apr 2025 · PDF</span>
-                </div>
-                <div class="doc-row">
-                  <div>
-                    <strong>SLA_fornitura_Q1.xlsx</strong>
-                    <p>Cartella: Allegati tecnici / Delta Components</p>
-                  </div>
-                  <span>18 apr 2026 · XLSX</span>
-                </div>
-                <div class="doc-row">
-                  <div>
-                    <strong>Sollecito_Officine_Delta_v2.docx</strong>
-                    <p>Cartella: Recupero crediti / Persone giuridiche / Officine Delta</p>
-                  </div>
-                  <span>12 mag 2026 · DOCX</span>
-                </div>
+                <div class="doc-row"><div><strong>Contratto_quadro_Delta_2025.pdf</strong><p>Contratti / Delta Components</p></div><span>PDF</span></div>
+                <div class="doc-row"><div><strong>Sollecito_Officine_Delta_v2.docx</strong><p>Sofferenze / Officine Delta</p></div><span>DOCX</span></div>
               </div>
             </article>
-
             <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Regole di notifica</p>
-                  <h3>Trigger operativi configurabili</h3>
-                </div>
-                <span class="badge">Audit ready</span>
-              </div>
-              <div class="task-list">
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Mail</strong>
-                    <p>Invio automatico per nuove richieste, approvazioni e messaggi con allegati.</p>
-                  </div>
-                  <span class="tag">Attivo</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>In-app</strong>
-                    <p>Notifica istantanea su task assegnati, stato cambiato e documenti caricati.</p>
-                  </div>
-                  <span class="tag success">Attivo</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>WhatsApp</strong>
-                    <p>Usato solo per alert urgenti o scadenze entro 48 ore.</p>
-                  </div>
-                  <span class="tag warning">Config</span>
-                </div>
+              <div class="section-head"><div><p class="eyebrow">Notifiche</p><h3>Canali</h3></div></div>
+              <div class="template-library">
+                <div class="template-chip">Mail</div>
+                <div class="template-chip">In-app</div>
+                <div class="template-chip">WhatsApp</div>
               </div>
             </article>
           </section>
@@ -998,36 +730,52 @@
           <div class="section-head">
             <div>
               <p class="eyebrow">Recupero crediti</p>
-              <h2>Posizioni in sofferenza sotto controllo</h2>
+              <h2>Posizioni in sofferenza</h2>
             </div>
           </div>
+
+          <section class="stats-grid">
+            <article class="stat-card">
+              <span>Totale</span>
+              <strong>3</strong>
+              <p>Pratiche attive</p>
+            </article>
+            <article class="stat-card">
+              <span>Persone fisiche</span>
+              <strong>1</strong>
+              <p>Privato Rossi</p>
+            </article>
+            <article class="stat-card">
+              <span>Persone giuridiche</span>
+              <strong>2</strong>
+              <p>Officine Delta, NordCargo</p>
+            </article>
+            <article class="stat-card">
+              <span>Valore</span>
+              <strong>€56k</strong>
+              <p>Esposizione attiva</p>
+            </article>
+          </section>
 
           <div class="timeline" data-tour-anchor="deadlines-timeline">
             <div class="timeline-item urgent">
               <div>
                 <strong>Officine Delta S.r.l.</strong>
-                <p>18.400 euro scaduti da 64 giorni. Secondo sollecito pronto per invio formale.</p>
+                <p>18.400 euro · secondo sollecito</p>
               </div>
               <span>64 gg</span>
             </div>
             <div class="timeline-item">
               <div>
-                <strong>Retail Nova Group</strong>
-                <p>6.200 euro. Da verificare documentazione firmata prima di attivare richiesta pagamento.</p>
-              </div>
-              <span>Nuova</span>
-            </div>
-            <div class="timeline-item">
-              <div>
                 <strong>NordCargo Logistics</strong>
-                <p>34.900 euro. Controparte attiva ma senza piano di rientro formalizzato.</p>
+                <p>34.900 euro · piano di rientro</p>
               </div>
               <span>31 gg</span>
             </div>
             <div class="timeline-item">
               <div>
                 <strong>Privato Rossi Marco</strong>
-                <p>2.850 euro. Debitore persona fisica, ultimo contatto telefonico senza esito.</p>
+                <p>2.850 euro · primo contatto</p>
               </div>
               <span>18 gg</span>
             </div>
@@ -1042,34 +790,34 @@
             </div>
           </div>
 
-          <div class="compliance-list" data-tour-anchor="compliance-list">
+              <div class="compliance-list" data-tour-anchor="compliance-list">
             <div class="compliance-item complete">
               <div>
                 <strong>Persone giuridiche</strong>
-                <p>15 pratiche. Gestione tramite PEC, fascicolo azienda e verifica contrattuale.</p>
+                <p>PEC, contratto, fatture, solleciti.</p>
               </div>
-              <span>15</span>
+              <span>2</span>
             </div>
             <div class="compliance-item progress" data-progress="86">
               <div>
                 <strong>Persone fisiche</strong>
-                <p>9 pratiche. Sollecito, piano di rientro, note contatto e documenti personali.</p>
+                <p>Contatto, note, piano di rientro.</p>
               </div>
-              <span>9</span>
+              <span>1</span>
             </div>
             <div class="compliance-item pending" data-progress="92">
               <div>
-                <strong>Documentazione completa</strong>
-                <p>11 pratiche con contratto, fatture e prova consegna già in repository.</p>
+                <strong>Esempio società</strong>
+                <p>Officine Delta S.r.l.</p>
               </div>
-              <span>11</span>
+              <span>PG</span>
             </div>
             <div class="compliance-item pending" data-progress="61">
               <div>
-                <strong>Da classificare</strong>
-                <p>3 pratiche in ingresso da smistare per tipo debitore e solidità documentale.</p>
+                <strong>Esempio persona fisica</strong>
+                <p>Rossi Marco</p>
               </div>
-              <span>3</span>
+              <span>PF</span>
             </div>
           </div>
         </section>
@@ -1129,8 +877,8 @@
         <section class="panel" id="partner" data-tour-anchor="partner-overview">
           <div class="section-head">
             <div>
-              <p class="eyebrow">Modalità consulente</p>
-              <h2>Vista partner legale su più aziende</h2>
+              <p class="eyebrow">Vista partner</p>
+              <h2>Clienti</h2>
             </div>
             <span class="badge dark">3 aziende presidiate</span>
           </div>
@@ -1139,36 +887,30 @@
             <article class="card" data-tour-anchor="partner-workspace">
               <div class="section-head">
                 <div>
-                  <p class="eyebrow">Workspace operativo</p>
-                  <h3>Inbox condivisa su tutte le aziende</h3>
+                  <p class="eyebrow">Inbox</p>
+                  <h3>Da fare adesso</h3>
                 </div>
-                <span class="badge warning-badge">7 item</span>
-              </div>
-              <div class="workspace-tabs">
-                <button class="workspace-tab active">Inbox</button>
-                <button class="workspace-tab">Urgenti</button>
-                <button class="workspace-tab">Priorità</button>
-                <button class="workspace-tab">In attesa</button>
+                <span class="badge warning-badge">3 item</span>
               </div>
               <div class="task-list">
                 <div class="task-item compact-row">
                   <div>
                     <strong>CARE Manufacturing · Rinnovo Delta Components</strong>
-                    <p>Messaggio in ingresso su contratto in rinnovo con allegati da verificare.</p>
+                    <p>Bozza Sofia da revisionare.</p>
                   </div>
                   <span class="tag warning">Urgente</span>
                 </div>
                 <div class="task-item compact-row">
                   <div>
                     <strong>NordFood Services · Sollecito NordCargo</strong>
-                    <p>Nuova richiesta cliente su posizione in sofferenza e piano di rientro.</p>
+                    <p>Piano di rientro da validare.</p>
                   </div>
                   <span class="tag">Inbox</span>
                 </div>
                 <div class="task-item compact-row">
                   <div>
                     <strong>Linea Distribuzione · Debitore persona fisica</strong>
-                    <p>Attività prioritaria da classificare prima di inviare il primo sollecito.</p>
+                    <p>Da classificare.</p>
                   </div>
                   <span class="tag success">Priorità</span>
                 </div>
@@ -1179,7 +921,7 @@
               <div class="section-head">
                 <div>
                   <p class="eyebrow">Vista aggregata</p>
-                  <h3>Urgenze e priorità del partner</h3>
+                  <h3>Numeri</h3>
                 </div>
                 <span class="badge dark">Live</span>
               </div>
@@ -1187,22 +929,22 @@
                 <div class="priority-card">
                   <span>Inbox</span>
                   <strong>3</strong>
-                  <p>Comunicazioni in ingresso non lette da clienti attivi.</p>
+                  <p>Messaggi nuovi</p>
                 </div>
                 <div class="priority-card">
                   <span>Urgenti</span>
                   <strong>2</strong>
-                  <p>Scadenze entro 7 giorni con impatto su rinnovi o recupero crediti.</p>
+                  <p>Urgenti</p>
                 </div>
                 <div class="priority-card">
                   <span>Priorità</span>
                   <strong>4</strong>
-                  <p>Task ad alta rilevanza operativa su contratti o posizioni in sofferenza.</p>
+                  <p>Priorità</p>
                 </div>
                 <div class="priority-card">
                   <span>Escalation</span>
                   <strong>1</strong>
-                  <p>Richiesta pronta per revisione specialistica.</p>
+                  <p>Revisioni</p>
                 </div>
               </div>
             </article>
@@ -1221,7 +963,7 @@
                 <button class="thread-card active-thread">
                   <div>
                     <strong>CARE Manufacturing S.r.l.</strong>
-                    <p>Contratti privati, repository, recupero crediti e comunicazioni cliente.</p>
+                    <p>Contratti + sofferenze</p>
                   </div>
                   <div class="thread-meta">
                     <span class="tag success">Attiva</span>
@@ -1231,7 +973,7 @@
                 <button class="thread-card">
                   <div>
                     <strong>NordFood Services S.p.A.</strong>
-                    <p>Contratti fornitori e pratiche di recupero su clienti retail e logistica.</p>
+                    <p>Contratti + sofferenze</p>
                   </div>
                   <div class="thread-meta">
                     <span class="tag">Attiva</span>
@@ -1241,7 +983,7 @@
                 <button class="thread-card">
                   <div>
                     <strong>Linea Distribuzione S.r.l.</strong>
-                    <p>Contratti distributivi e posizioni miste da classificare per tipo debitore.</p>
+                    <p>Contratti + sofferenze</p>
                   </div>
                   <div class="thread-meta">
                     <span class="tag">Attiva</span>
@@ -1292,136 +1034,7 @@
             </article>
           </section>
 
-          <section class="content-grid">
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Focus rapido</p>
-                  <h3>Cosa fare oggi sul portfolio</h3>
-                </div>
-                <span class="badge">Today</span>
-              </div>
-              <div class="task-list">
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Rispondi a CARE Manufacturing</strong>
-                    <p>Thread rinnovo Delta Components con allegati da confermare.</p>
-                  </div>
-                  <span class="tag warning">Inbox</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Chiudi review sollecito NordFood</strong>
-                    <p>Secondo sollecito da validare oggi su debitore persona giuridica.</p>
-                  </div>
-                  <span class="tag">Scadenza</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Apri task classificazione Linea Distribuzione</strong>
-                    <p>Separare persona fisica e persona giuridica prima dell’invio comunicazioni.</p>
-                  </div>
-                  <span class="tag success">Priorità</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Metriche lavoro</p>
-                  <h3>Carico operativo partner</h3>
-                </div>
-                <span class="badge dark">This week</span>
-              </div>
-              <div class="template-library">
-                <div class="template-chip">11 review aperte</div>
-                <div class="template-chip">6 messaggi inviati</div>
-                <div class="template-chip">4 attese cliente</div>
-                <div class="template-chip">2 task chiusi oggi</div>
-              </div>
-            </article>
-          </section>
-
-          <section class="stats-grid">
-            <article class="stat-card">
-              <span>Aziende attive</span>
-              <strong>3</strong>
-              <p>Manufacturing, food services e distribuzione con moduli contratti e crediti attivi.</p>
-            </article>
-            <article class="stat-card">
-              <span>Pratiche aperte</span>
-              <strong>4</strong>
-              <p>2 contrattuali e 2 di recupero crediti con richiesta operativa già ricevuta.</p>
-            </article>
-            <article class="stat-card">
-              <span>Revisioni this month</span>
-              <strong>11</strong>
-              <p>Interventi su contratti da rinnovare e lettere di recupero da validare.</p>
-            </article>
-            <article class="stat-card">
-              <span>Opportunità attive</span>
-              <strong>2</strong>
-              <p>Estensione verso recupero crediti sistematico e gestione massiva dei contratti.</p>
-            </article>
-          </section>
-
-          <section class="content-grid">
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Portafoglio</p>
-                  <h3>Aziende seguite</h3>
-                </div>
-              </div>
-              <div class="doc-list">
-                <div class="doc-row">
-                  <div>
-                    <strong>CARE Manufacturing S.r.l.</strong>
-                    <p>2 pratiche aperte, 79/100 presidio operativo</p>
-                  </div>
-                  <span>Attiva</span>
-                </div>
-                <div class="doc-row">
-                  <div>
-                    <strong>NordFood Services S.p.A.</strong>
-                    <p>1 pratica di recupero aperta, 83/100 presidio operativo</p>
-                  </div>
-                  <span>Attiva</span>
-                </div>
-                <div class="doc-row">
-                  <div>
-                    <strong>Linea Distribuzione S.r.l.</strong>
-                    <p>1 pratica da classificare, 75/100 presidio operativo</p>
-                  </div>
-                  <span>Attiva</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Casi qualificati</p>
-                  <h3>Dove entra il professionista</h3>
-                </div>
-              </div>
-              <div class="audit-trail">
-                <div class="audit-item">
-                    <strong>CARE Manufacturing</strong>
-                    <p>Supply agreement con rinnovo da governare e fascicolo crediti su cliente industriale.</p>
-                </div>
-                <div class="audit-item">
-                  <strong>NordFood Services</strong>
-                  <p>Sollecito e piano di rientro da rivedere su cliente logistico con 34.900 euro esposti.</p>
-                </div>
-                <div class="audit-item">
-                  <strong>Linea Distribuzione</strong>
-                  <p>Classificazione debitore e scelta del flusso corretto prima del primo invio formale.</p>
-                </div>
-              </div>
-            </article>
-          </section>
+          
 
           <section class="content-grid">
             <article class="card" data-tour-anchor="partner-comms">

@@ -141,7 +141,7 @@ let activeTourSteps = companyTourSteps;
 
 let currentTourStep = 0;
 
-const defaultDraft = () => `Bozza pronta per l’uso
+const defaultDraft = () => `Bozza Sofia pronta
 
 Tipo: Contratto di servizi
 Controparte: Beta Logistics S.r.l.
@@ -178,7 +178,7 @@ const renderDraft = (formData) => {
     clauses.push("Recesso anticipato con preavviso concordato.");
   }
 
-  draftOutput.textContent = `Bozza pronta per l’uso
+  draftOutput.textContent = `Bozza Sofia pronta
 
 Tipo: ${formData.get("contractType")}
 Controparte: ${formData.get("counterparty")}
