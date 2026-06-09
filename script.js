@@ -28,6 +28,12 @@ const repositoryTitle = document.getElementById("repository-title");
 const repositoryBadge = document.getElementById("repository-badge");
 const repositoryCopy = document.getElementById("repository-copy");
 
+const setText = (element, value) => {
+  if (element) {
+    element.textContent = value;
+  }
+};
+
 const companyTourSteps = [
   {
     panel: "overview",
@@ -224,28 +230,36 @@ const applyMode = (mode) => {
   });
 
   if (mode === "partner") {
-    sidebarEyebrow.textContent = "Vista partner";
-    sidebarTitle.textContent = "Progetti azienda, inbox aggregata e fascicoli tracciati";
-    sidebarText.textContent =
-      "Il professionista presidia piu' aziende, riceve richieste strutturate su contratti e recupero crediti e interviene per validazione, negoziazione o azione ulteriore.";
-    workspaceEyebrow.textContent = "Partner workspace";
-    workspaceTitle.textContent = "Studio partner | Portafoglio aziende";
-    repositoryTitle.textContent = "Repository della singola azienda: contratti, solleciti, thread e stati tracciati";
-    repositoryBadge.textContent = "Per azienda";
-    repositoryCopy.textContent =
-      "In vista partner il repository viene letto per la singola azienda selezionata nel portafoglio. Qui il professionista segue contratti, solleciti, messaggi, allegati, stati e storico completo senza passare da email sparse.";
+    setText(sidebarEyebrow, "Vista partner");
+    setText(sidebarTitle, "Progetti azienda, inbox aggregata e fascicoli tracciati");
+    setText(
+      sidebarText,
+      "Il professionista presidia piu' aziende, riceve richieste strutturate su contratti e recupero crediti e interviene per validazione, negoziazione o azione ulteriore."
+    );
+    setText(workspaceEyebrow, "Partner workspace");
+    setText(workspaceTitle, "Studio partner | Portafoglio aziende");
+    setText(repositoryTitle, "Repository della singola azienda: contratti, solleciti, thread e stati tracciati");
+    setText(repositoryBadge, "Per azienda");
+    setText(
+      repositoryCopy,
+      "In vista partner il repository viene letto per la singola azienda selezionata nel portafoglio. Qui il professionista segue contratti, solleciti, messaggi, allegati, stati e storico completo senza passare da email sparse."
+    );
     openPanel("partner");
   } else {
-    sidebarEyebrow.textContent = "Posizionamento";
-    sidebarTitle.textContent = "Contratti e recupero crediti nello stesso workspace";
-    sidebarText.textContent =
-      "La piattaforma governa contratti con enti privati e pratiche di recupero crediti. Il supporto specialistico si attiva sulle revisioni o sulle azioni da formalizzare.";
-    workspaceEyebrow.textContent = "Company workspace";
-    workspaceTitle.textContent = "CARE Manufacturing S.r.l.";
-    repositoryTitle.textContent = "Contratti, solleciti, messaggi e stati in un unico workspace tracciato";
-    repositoryBadge.textContent = "Core workflow";
-    repositoryCopy.textContent =
-      "Qui l’azienda gestisce fascicoli, thread, contratti, lettere di sollecito, allegati e stati di lavorazione in un unico spazio operativo. Tutto resta tracciato e sostituisce lo scambio dispersivo via mail.";
+    setText(sidebarEyebrow, "Posizionamento");
+    setText(sidebarTitle, "Contratti e recupero crediti nello stesso workspace");
+    setText(
+      sidebarText,
+      "La piattaforma governa contratti con enti privati e pratiche di recupero crediti. Il supporto specialistico si attiva sulle revisioni o sulle azioni da formalizzare."
+    );
+    setText(workspaceEyebrow, "Company workspace");
+    setText(workspaceTitle, "CARE Manufacturing S.r.l.");
+    setText(repositoryTitle, "Contratti, solleciti, messaggi e stati in un unico workspace tracciato");
+    setText(repositoryBadge, "Core workflow");
+    setText(
+      repositoryCopy,
+      "Qui l’azienda gestisce fascicoli, thread, contratti, lettere di sollecito, allegati e stati di lavorazione in un unico spazio operativo. Tutto resta tracciato e sostituisce lo scambio dispersivo via mail."
+    );
     openPanel("overview");
   }
 };
