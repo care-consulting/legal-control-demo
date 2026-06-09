@@ -167,6 +167,7 @@ textarea {
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.66);
   border: 1px solid rgba(24, 34, 45, 0.08);
+  text-align: left;
 }
 
 .action-tile p {
@@ -322,6 +323,7 @@ textarea {
 
 .card {
   overflow: hidden;
+  padding: 20px;
 }
 
 .card > *:first-child {
@@ -479,6 +481,12 @@ textarea {
   margin-top: 24px;
 }
 
+.section-copy {
+  margin: -6px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1.3fr 320px;
@@ -518,6 +526,43 @@ textarea {
 .hero-card p {
   margin: 0;
   color: rgba(255, 255, 255, 0.72);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.data-table th {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.data-table tbody tr.is-selected {
+  background: rgba(217, 104, 59, 0.08);
+}
+
+.data-table tbody tr.clickable-row {
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.data-table tbody tr.clickable-row:hover {
+  background: rgba(24, 34, 45, 0.04);
 }
 
 .stats-grid,
@@ -573,6 +618,10 @@ textarea {
   grid-template-columns: 1.1fr 0.9fr;
 }
 
+.contracts-stack {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
 .badge,
 .tag {
   display: inline-flex;
@@ -609,6 +658,12 @@ textarea {
 .warning-badge {
   background: rgba(198, 146, 43, 0.18);
   color: #8b6519;
+}
+
+.danger-badge,
+.tag.danger {
+  background: rgba(185, 65, 65, 0.12);
+  color: var(--danger);
 }
 
 .tag.warning {
@@ -776,6 +831,14 @@ textarea {
   margin-top: 20px;
 }
 
+.top-gap {
+  margin-top: 16px;
+}
+
+.inline-composer {
+  margin-top: 18px;
+}
+
 .notification-item {
   text-align: left;
   border: 1px solid var(--line);
@@ -907,6 +970,16 @@ textarea {
   line-height: 1.2;
 }
 
+.partner-client-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.partner-client-chip {
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
 .comms-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1030,6 +1103,20 @@ textarea {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.client-switcher {
+  display: grid;
+  gap: 6px;
+  min-width: 240px;
+}
+
+.switcher-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 800;
 }
 
 .status-select {

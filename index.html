@@ -103,11 +103,9 @@
             <button class="nav-item nav-company" data-panel="deadlines">Sofferenze</button>
             <button class="nav-item nav-company" data-panel="compliance">Debitori</button>
             <button class="nav-item nav-company nav-emphasis" data-panel="repository">Messaggi</button>
-            <button class="nav-item nav-partner active" data-panel="partner">Clienti</button>
-            <button class="nav-item nav-partner" data-panel="contracts">Contratti</button>
-            <button class="nav-item nav-partner" data-panel="deadlines">Sofferenze</button>
-            <button class="nav-item nav-partner nav-emphasis" data-panel="repository">Messaggi</button>
-            <button class="nav-item nav-partner" data-panel="compliance">Debitori</button>
+            <button class="nav-item nav-partner active" data-panel="partner">Dashboard</button>
+            <button class="nav-item nav-partner" data-panel="repository">Priorità</button>
+            <button class="nav-item nav-partner nav-emphasis" data-panel="partner-client">Scheda cliente</button>
           </nav>
         </div>
 
@@ -127,7 +125,6 @@
             <h1 id="workspace-title">CARE Manufacturing S.r.l.</h1>
           </div>
           <div class="topbar-actions">
-            <button class="ghost-button" id="start-tour">Avvia guida</button>
             <div class="pulse">
               <span></span>
               Workspace attivo
@@ -137,81 +134,55 @@
         </header>
 
         <section class="panel active" id="overview">
-          <section class="hero" data-tour-anchor="overview-hero">
+          <section class="hero">
             <div>
               <p class="eyebrow">Vista azienda</p>
-              <h2>Due aree principali.</h2>
-              <p class="hero-copy">Contratti. Posizioni in sofferenza. Tutto il resto vive dentro i fascicoli.</p>
+              <h2>Dashboard iniziale.</h2>
+              <p class="hero-copy">Indicatori sintetici sopra. Tre aree operative sotto. Le conversazioni restano dentro il singolo fascicolo.</p>
             </div>
             <div class="hero-card">
               <span>Aperte oggi</span>
-              <strong>5</strong>
-              <p>2 contratti da rivedere, 3 posizioni in sofferenza da muovere.</p>
+              <strong>8</strong>
+              <p>3 contratti, 3 sofferenze, 2 debitori in mora.</p>
             </div>
-          </section>
-
-          <section class="quick-actions">
-            <button class="action-tile" data-panel-target="contracts">
-              <strong>Contratti</strong>
-              <p>Nuova richiesta, Sofia, revisione partner, approvato per uso.</p>
-            </button>
-            <button class="action-tile" data-panel-target="deadlines">
-              <strong>Posizioni in sofferenza</strong>
-              <p>Recupero crediti, importi, stato pratica, tipo di debitore.</p>
-            </button>
-            <button class="action-tile" data-panel-target="repository">
-              <strong>Messaggi</strong>
-              <p>Cliente e partner si scambiano note, file e aggiornamenti dentro i task.</p>
-            </button>
           </section>
 
           <section class="stats-grid">
             <article class="stat-card">
               <span>Contratti</span>
-              <strong>2</strong>
-              <p>1 in revisione partner, 1 approvato per uso.</p>
+              <strong>3</strong>
+              <p>1 bozza, 1 in revisione, 1 approvato.</p>
             </article>
             <article class="stat-card">
               <span>Sofferenze</span>
               <strong>3</strong>
-              <p>2 persone giuridiche, 1 persona fisica.</p>
+              <p>2 solleciti, 1 piano di rientro.</p>
+            </article>
+            <article class="stat-card">
+              <span>Debitori in mora</span>
+              <strong>2</strong>
+              <p>Pratiche passate alla fase successiva.</p>
             </article>
             <article class="stat-card">
               <span>Messaggi aperti</span>
-              <strong>4</strong>
-              <p>Thread attivi tra azienda e partner.</p>
-            </article>
-            <article class="stat-card">
-              <span>Urgenti</span>
               <strong>2</strong>
-              <p>1 bozza contratto, 1 sollecito da inviare.</p>
+              <p>Il legale aspetta risposta del cliente.</p>
             </article>
           </section>
-          <section class="content-grid">
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Contratti</p>
-                  <h3>Esempi</h3>
-                </div>
-              </div>
-              <div class="task-list">
-                <div class="task-item compact-row"><div><strong>NDA Beta Logistics</strong><p>In revisione partner</p></div><span class="tag warning">Review</span></div>
-                <div class="task-item compact-row"><div><strong>Fornitura Delta Components</strong><p>Approvato per uso</p></div><span class="tag success">Ok</span></div>
-              </div>
-            </article>
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Sofferenze</p>
-                  <h3>Esempi</h3>
-                </div>
-              </div>
-              <div class="task-list">
-                <div class="task-item compact-row"><div><strong>Officine Delta</strong><p>18.400 euro</p></div><span class="tag warning">Sollecito</span></div>
-                <div class="task-item compact-row"><div><strong>Privato Rossi</strong><p>2.850 euro</p></div><span class="tag">Contatto</span></div>
-              </div>
-            </article>
+
+          <section class="quick-actions">
+            <button class="action-tile" data-panel-target="contracts">
+              <strong>Contratti</strong>
+              <p>Elenco contratti e nuova bozza con Sofia.</p>
+            </button>
+            <button class="action-tile" data-panel-target="deadlines">
+              <strong>Sofferenze</strong>
+              <p>Tabella pratiche e stato recupero.</p>
+            </button>
+            <button class="action-tile" data-panel-target="compliance">
+              <strong>Debitori in mora</strong>
+              <p>Posizioni passate a messa in mora.</p>
+            </button>
           </section>
         </section>
 
@@ -219,19 +190,77 @@
           <div class="section-head">
             <div>
               <p class="eyebrow">Contratti con enti privati</p>
-              <h2>Sofia prepara la bozza. Il partner revisiona.</h2>
+              <h2>Elenco contratti</h2>
             </div>
-            <span class="badge">Sofia AI</span>
+            <span class="badge">3 contratti</span>
           </div>
 
-          <section class="contracts-layout">
-            <article class="card" data-tour-anchor="contracts-builder">
+          <section class="card">
+            <div class="table-wrap">
+              <table class="data-table" id="contracts-table">
+                <thead>
+                  <tr>
+                    <th>Contratto</th>
+                    <th>Controparte</th>
+                    <th>Stato</th>
+                    <th>Ultimo aggiornamento</th>
+                    <th>Messaggi</th>
+                  </tr>
+                </thead>
+                <tbody id="contracts-table-body">
+                  <tr class="is-selected clickable-row" data-panel-target="contract-detail">
+                    <td>NDA Beta Logistics</td>
+                    <td>Beta Logistics S.r.l.</td>
+                    <td><span class="tag warning">In revisione</span></td>
+                    <td>09 giu 2026</td>
+                    <td>2</td>
+                  </tr>
+                  <tr class="clickable-row" data-panel-target="contract-detail">
+                    <td>Fornitura Delta Components</td>
+                    <td>Delta Components S.p.A.</td>
+                    <td><span class="tag success">Approvato</span></td>
+                    <td>06 giu 2026</td>
+                    <td>1</td>
+                  </tr>
+                  <tr class="clickable-row" data-panel-target="contract-detail">
+                    <td>Consulenza HR Cloud</td>
+                    <td>HR Cloud Italia</td>
+                    <td><span class="tag">Bozza</span></td>
+                    <td>05 giu 2026</td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="contracts-layout contracts-stack">
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Nuovo contratto</p>
+                  <h3>Scegli modello o crea nuovo</h3>
+                </div>
+              </div>
+              <div class="template-library compact-chips">
+                <div class="template-chip">NDA / Riservatezza</div>
+                <div class="template-chip">Fornitura</div>
+                <div class="template-chip">Servizi</div>
+                <div class="template-chip">Consulenza</div>
+              </div>
+              <div class="draft-footer top-gap">
+                <button class="ghost-button">Usa modello</button>
+                <button class="primary-button" id="open-contract-builder">Crea nuovo</button>
+              </div>
+            </article>
+
+            <article class="card" id="contract-builder-card">
               <div class="section-head">
                 <div>
                   <p class="eyebrow">Assistente AI</p>
                   <h3>Sofia</h3>
                 </div>
-                <span class="badge success">Nuova richiesta</span>
+                <span class="badge success">Crea bozza</span>
               </div>
               <form id="contract-form" class="form-grid">
                 <label>
@@ -276,127 +305,53 @@
                 </div>
 
                 <div class="form-actions full">
-                  <button type="submit" class="primary-button">Genera bozza con Sofia</button>
+                  <button type="submit" class="primary-button">Crea bozza con Sofia</button>
                   <button type="button" class="ghost-button" id="reset-contract">Reset</button>
                 </div>
               </form>
             </article>
-
-            <article class="card draft-card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Output</p>
-                  <h3>Bozza</h3>
-                </div>
-                <span class="badge warning-badge">In revisione partner</span>
-              </div>
-              <div id="draft-output" class="draft-output"></div>
-              <div class="draft-footer">
-                <button class="primary-button">Invia al partner</button>
-                <button class="ghost-button">Salva</button>
-                <button class="ghost-button accent-ghost">Notifica</button>
-              </div>
-            </article>
           </section>
 
-          <section class="content-grid">
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Workflow stato</p>
-                  <h3>Stati</h3>
-                </div>
-                <span class="badge dark">Tracciato</span>
-              </div>
-              <div class="task-list">
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Richiesta aperta</strong>
-                    <p>Il cliente compila il task.</p>
-                  </div>
-                  <span class="tag">Avvio</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Bozza generata</strong>
-                    <p>Sofia crea la prima versione.</p>
-                  </div>
-                  <span class="tag success">AI</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>In revisione partner</strong>
-                    <p>Il partner rivede e annota.</p>
-                  </div>
-                  <span class="tag warning">Review</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Approvato per uso</strong>
-                    <p>Il cliente riceve notifica.</p>
-                  </div>
-                  <span class="tag success">Finale</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Messaggi e note</p>
-                  <h3>Messaggi nel task</h3>
-                </div>
-                <span class="badge">2 livelli</span>
-              </div>
-              <div class="task-list">
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Messaggi condivisi</strong>
-                    <p>Cliente e partner scrivono qui.</p>
-                  </div>
-                  <span class="tag">Chat</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Note interne partner</strong>
-                    <p>Visibili solo al partner.</p>
-                  </div>
-                  <span class="tag">Interno</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Timeline</strong>
-                    <p>Stati, note e file restano tracciati.</p>
-                  </div>
-                  <span class="tag success">Audit</span>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <section class="card">
+          <section class="card draft-card">
             <div class="section-head">
               <div>
-                <p class="eyebrow">Workflow</p>
-                <h3>Audit trail della bozza</h3>
+                <p class="eyebrow">Contratto selezionato</p>
+                <h3 id="draft-title">Bozza</h3>
+              </div>
+              <span class="badge warning-badge" id="draft-status">Bozza</span>
+            </div>
+            <div id="draft-output" class="draft-output"></div>
+            <div class="draft-footer">
+              <button class="primary-button">Invia al partner</button>
+              <button class="ghost-button">Salva</button>
+            </div>
+            <div class="message-feed top-gap">
+              <div class="message-bubble incoming">
+                <div class="message-head">
+                  <strong>Partner legale</strong>
+                  <small>09 giu 2026 · 11:10</small>
+                </div>
+                <p>Per procedere mi serve conferma sul foro competente e sulla durata.</p>
+              </div>
+              <div class="message-bubble outgoing">
+                <div class="message-head">
+                  <strong>Cliente</strong>
+                  <small>09 giu 2026 · 11:28</small>
+                </div>
+                <p>Confermo foro Milano e durata 24 mesi.</p>
               </div>
             </div>
-            <div class="audit-trail">
-              <div class="audit-item">
-                <strong>25 aprile 2026, 10:12</strong>
-                <p>Richiesta aperta dal cliente.</p>
-              </div>
-              <div class="audit-item">
-                <strong>25 aprile 2026, 10:19</strong>
-                <p>Sofia genera la bozza.</p>
-              </div>
-              <div class="audit-item">
-                <strong>25 aprile 2026, 10:24</strong>
-                <p>Alert inviato al partner.</p>
-              </div>
-              <div class="audit-item">
-                <strong>25 aprile 2026, 10:41</strong>
-                <p>Partner revisiona e notifica il cliente.</p>
+            <div class="composer-box inline-composer">
+              <label class="full">
+                Messaggio sul contratto
+                <textarea rows="3">Invio aggiornamento sul singolo contratto.</textarea>
+              </label>
+              <div class="composer-footer">
+                <div class="composer-meta">
+                  <span class="attachment-pill">+ Allega</span>
+                  <span class="attachment-pill">Stato</span>
+                </div>
+                <button class="primary-button">Invia messaggio</button>
               </div>
             </div>
           </section>
@@ -406,178 +361,73 @@
           <div class="section-head">
             <div>
               <p class="eyebrow">Messaggi</p>
-              <h2 id="repository-title">Task, note e allegati</h2>
+              <h2 id="repository-title">Riepilogo messaggi</h2>
             </div>
             <span class="badge dark" id="repository-badge">Condiviso</span>
           </div>
           <p class="section-copy" id="repository-copy">
-            Contratti, solleciti, note e allegati restano nello stesso workspace operativo, con stato pratica e storico leggibile.
+            I messaggi restano dentro il singolo contratto o la singola pratica. Qui vedi solo ciò che è in attesa di risposta.
           </p>
-
-          <section class="repository-layout">
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Task</p>
-                  <h3>Aperti</h3>
-                </div>
-                <span class="badge">3 thread</span>
-              </div>
-              <div class="thread-list">
-                <button class="thread-card active-thread">
-                  <div>
-                    <strong>Rinnovo contratto quadro Delta Components</strong>
-                    <p>Oggetto: conferma rinnovo o disdetta entro il 20 aprile 2026</p>
-                  </div>
-                  <div class="thread-meta">
-                    <span class="tag warning">In attesa cliente</span>
-                    <small>25 apr 2026 · 10:41</small>
-                  </div>
-                </button>
-                <button class="thread-card">
-                  <div>
-                    <strong>Sollecito Officine Delta S.r.l.</strong>
-                    <p>Oggetto: invio secondo sollecito con fatture e prova consegna allegate</p>
-                  </div>
-                  <div class="thread-meta">
-                    <span class="tag">Bozza interna</span>
-                    <small>24 apr 2026 · 17:22</small>
-                  </div>
-                </button>
-                <button class="thread-card">
-                  <div>
-                    <strong>Piano di rientro NordCargo Logistics</strong>
-                    <p>Oggetto: proposta rateizzazione e conferma scadenze di pagamento</p>
-                  </div>
-                  <div class="thread-meta">
-                    <span class="tag success">Chiusura vicina</span>
-                    <small>23 apr 2026 · 09:08</small>
-                  </div>
-                </button>
-              </div>
+          <section class="stats-grid">
+            <article class="stat-card">
+              <span>Da rispondere</span>
+              <strong>2</strong>
+              <p>Messaggi del legale in attesa cliente.</p>
             </article>
-
-            <article class="card thread-panel" data-tour-anchor="repository-thread">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Thread task</p>
-                  <h3>Rinnovo contratto quadro Delta Components</h3>
-                </div>
-                <div class="thread-status">
-                  <span class="badge warning-badge">In attesa cliente</span>
-                  <select class="status-select">
-                    <option>In attesa cliente</option>
-                    <option>In revisione partner</option>
-                    <option>Bozza interna</option>
-                    <option>Chiuso</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="thread-toolbar">
-                <span class="template-chip">Cliente + partner</span>
-                <span class="template-chip">Stato tracciato</span>
-              </div>
-
-              <div class="thread-summary">
-                <div class="priority-card">
-                  <span>Stato</span>
-                  <strong>In attesa cliente</strong>
-                  <p>Ultimo messaggio ricevuto il 25 aprile 2026 alle 10:41.</p>
-                </div>
-                <div class="priority-card">
-                  <span>Allegati</span>
-                  <strong>2 file</strong>
-                  <p>Contratto firmato e riepilogo SLA disponibili nel fascicolo.</p>
-                </div>
-              </div>
-
-              <div class="message-feed">
-                <div class="message-bubble incoming">
-                  <div class="message-head">
-                    <strong>Operations CARE Manufacturing</strong>
-                    <small>25 aprile 2026 · 09:14</small>
-                  </div>
-                  <p>Abbiamo bisogno di capire se rinnovare il contratto quadro o inviare disdetta. Allego l’ultima versione firmata e il riepilogo SLA.</p>
-                  <div class="message-attachments">
-                    <span class="attachment-pill">Contratto_quadro_Delta_2025.pdf</span>
-                    <span class="attachment-pill">SLA_fornitura_Q1.xlsx</span>
-                  </div>
-                </div>
-
-                <div class="message-bubble outgoing">
-                  <div class="message-head">
-                    <strong>Partner legale</strong>
-                    <small>25 aprile 2026 · 10:02</small>
-                  </div>
-                  <p>Ho rilevato una clausola penali senza cap economico. Prima del rinnovo suggerisco conferma interna su volumi e margini oppure una richiesta di modifica alla controparte.</p>
-                </div>
-
-                <div class="message-bubble incoming">
-                  <div class="message-head">
-                    <strong>Operations CARE Manufacturing</strong>
-                    <small>25 aprile 2026 · 10:41</small>
-                  </div>
-                  <p>Ricevuto. Inserisco il task in approvazione acquisti e CFO. Appena abbiamo feedback ti chiediamo eventuale revisione finale.</p>
-                </div>
-              </div>
-
-              <div class="thread-summary notes-split">
-                <div class="priority-card">
-                  <span>Messaggio condiviso</span>
-                  <strong>Cliente e partner</strong>
-                  <p>Richieste, risposte, allegati.</p>
-                </div>
-                <div class="priority-card">
-                  <span>Nota interna partner</span>
-                  <strong>Solo partner</strong>
-                  <p>Verificare margine minimo prima del rinnovo.</p>
-                </div>
-              </div>
-
-              <div class="composer-box">
-                <div class="composer-grid form-grid">
-                  <label class="full">
-                    Oggetto
-                    <input value="Rinnovo contratto quadro Delta Components" />
-                  </label>
-                  <label class="full">
-                    Messaggio
-                    <textarea rows="5">Propongo di mantenere aperto il thread fino a conferma interna. Se la controparte chiede modifiche su penali o responsabilità, apriamo revisione specialistica.</textarea>
-                  </label>
-                </div>
-                <div class="composer-footer">
-                  <div class="composer-meta">
-                    <span class="attachment-pill">+ Allega file</span>
-                    <span class="attachment-pill">Risposta rapida</span>
-                    <span class="attachment-pill">Cambia stato</span>
-                    <span class="attachment-pill">Nota interna</span>
-                  </div>
-                  <div class="draft-footer">
-                    <button class="ghost-button">Salva bozza</button>
-                    <button class="primary-button">Invia messaggio</button>
-                  </div>
-                </div>
-              </div>
+            <article class="stat-card">
+              <span>Contratti</span>
+              <strong>1</strong>
+              <p>Thread aperto su NDA Beta Logistics.</p>
+            </article>
+            <article class="stat-card">
+              <span>Sofferenze</span>
+              <strong>1</strong>
+              <p>Thread aperto su Officine Delta.</p>
+            </article>
+            <article class="stat-card">
+              <span>Debitori</span>
+              <strong>1</strong>
+              <p>Thread aperto su NordCargo.</p>
             </article>
           </section>
 
-          <section class="content-grid">
-            <article class="card">
-              <div class="section-head"><div><p class="eyebrow">Allegati</p><h3>Esempi</h3></div></div>
-              <div class="doc-list">
-                <div class="doc-row"><div><strong>Contratto_quadro_Delta_2025.pdf</strong><p>Contratti / Delta Components</p></div><span>PDF</span></div>
-                <div class="doc-row"><div><strong>Sollecito_Officine_Delta_v2.docx</strong><p>Sofferenze / Officine Delta</p></div><span>DOCX</span></div>
-              </div>
-            </article>
-            <article class="card">
-              <div class="section-head"><div><p class="eyebrow">Notifiche</p><h3>Canali</h3></div></div>
-              <div class="template-library">
-                <div class="template-chip">Mail</div>
-                <div class="template-chip">In-app</div>
-                <div class="template-chip">WhatsApp</div>
-              </div>
-            </article>
+          <section class="card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Area</th>
+                    <th>Pratica</th>
+                    <th>Ultimo messaggio legale</th>
+                    <th>Stato</th>
+                    <th>Attesa</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="clickable-row" data-panel-target="contract-detail">
+                    <td>Contratti</td>
+                    <td>NDA Beta Logistics</td>
+                    <td>Confermare foro e durata</td>
+                    <td><span class="tag warning">Aperto</span></td>
+                    <td>Cliente</td>
+                  </tr>
+                  <tr class="clickable-row" data-panel-target="deadlines" data-scroll-target="deadlines-detail">
+                    <td>Sofferenze</td>
+                    <td>Officine Delta</td>
+                    <td>Ok a invio secondo sollecito?</td>
+                    <td><span class="tag">Bozza</span></td>
+                    <td>Cliente</td>
+                  </tr>
+                  <tr class="clickable-row" data-panel-target="compliance" data-scroll-target="compliance-detail">
+                    <td>Debitori</td>
+                    <td>NordCargo Logistics</td>
+                    <td>Autorizzare messa in mora</td>
+                    <td><span class="tag success">Pronto</span></td>
+                    <td>Cliente</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
         </section>
 
@@ -744,14 +594,14 @@
               <p>Pratiche attive</p>
             </article>
             <article class="stat-card">
-              <span>Persone fisiche</span>
-              <strong>1</strong>
-              <p>Privato Rossi</p>
+              <span>Sollecito</span>
+              <strong>2</strong>
+              <p>Primo e secondo sollecito</p>
             </article>
             <article class="stat-card">
-              <span>Persone giuridiche</span>
-              <strong>2</strong>
-              <p>Officine Delta, NordCargo</p>
+              <span>Piano di rientro</span>
+              <strong>1</strong>
+              <p>In negoziazione</p>
             </article>
             <article class="stat-card">
               <span>Valore</span>
@@ -760,69 +610,154 @@
             </article>
           </section>
 
-          <div class="timeline" data-tour-anchor="deadlines-timeline">
-            <div class="timeline-item urgent">
-              <div>
-                <strong>Officine Delta S.r.l.</strong>
-                <p>18.400 euro · secondo sollecito</p>
-              </div>
-              <span>64 gg</span>
+          <section class="card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Pratica</th>
+                    <th>Importo</th>
+                    <th>Tipo debitore</th>
+                    <th>Stato</th>
+                    <th>Ultima azione</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="is-selected clickable-row" data-panel-target="deadlines" data-scroll-target="deadlines-detail">
+                    <td>Officine Delta</td>
+                    <td>€18.400</td>
+                    <td>Persona giuridica</td>
+                    <td><span class="tag warning">Secondo sollecito</span></td>
+                    <td>Bozza lettera pronta</td>
+                  </tr>
+                  <tr class="clickable-row" data-panel-target="deadlines" data-scroll-target="deadlines-detail">
+                    <td>Privato Rossi</td>
+                    <td>€2.850</td>
+                    <td>Persona fisica</td>
+                    <td><span class="tag">Contatto</span></td>
+                    <td>Telefonata registrata</td>
+                  </tr>
+                  <tr class="clickable-row" data-panel-target="compliance" data-scroll-target="compliance-detail">
+                    <td>NordCargo Logistics</td>
+                    <td>€34.700</td>
+                    <td>Persona giuridica</td>
+                    <td><span class="tag danger">Messa in mora</span></td>
+                    <td>Segnalata al tab Debitori</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="timeline-item">
+          </section>
+
+          <section class="card" id="deadlines-detail">
+            <div class="section-head">
               <div>
-                <strong>NordCargo Logistics</strong>
-                <p>34.900 euro · piano di rientro</p>
+                <p class="eyebrow">Pratica selezionata</p>
+                <h3>Officine Delta</h3>
               </div>
-              <span>31 gg</span>
+              <span class="badge warning-badge">Secondo sollecito</span>
             </div>
-            <div class="timeline-item">
-              <div>
-                <strong>Privato Rossi Marco</strong>
-                <p>2.850 euro · primo contatto</p>
+            <div class="message-feed">
+              <div class="message-bubble outgoing">
+                <div class="message-head">
+                  <strong>Partner legale</strong>
+                  <small>09 giu 2026 · 10:03</small>
+                </div>
+                <p>Ho preparato il secondo sollecito. Mi dai ok all’invio?</p>
               </div>
-              <span>18 gg</span>
+              <div class="message-bubble incoming">
+                <div class="message-head">
+                  <strong>Cliente</strong>
+                  <small>09 giu 2026 · 10:22</small>
+                </div>
+                <p>Confermo invio oggi.</p>
+              </div>
             </div>
-          </div>
+          </section>
         </section>
 
         <section class="panel" id="compliance">
           <div class="section-head">
             <div>
-              <p class="eyebrow">Classificazione</p>
-              <h2>Tipo di debitore e flusso corretto</h2>
+              <p class="eyebrow">Fase successiva</p>
+              <h2>Debitori in mora</h2>
             </div>
+            <span class="badge">2 posizioni</span>
           </div>
 
-              <div class="compliance-list" data-tour-anchor="compliance-list">
-            <div class="compliance-item complete">
-              <div>
-                <strong>Persone giuridiche</strong>
-                <p>PEC, contratto, fatture, solleciti.</p>
-              </div>
-              <span>2</span>
+          <section class="stats-grid">
+            <article class="stat-card">
+              <span>Totale</span>
+              <strong>2</strong>
+              <p>Pratiche passate in mora.</p>
+            </article>
+            <article class="stat-card">
+              <span>Persone giuridiche</span>
+              <strong>1</strong>
+              <p>NordCargo Logistics</p>
+            </article>
+            <article class="stat-card">
+              <span>Persone fisiche</span>
+              <strong>1</strong>
+              <p>Privato Rossi</p>
+            </article>
+            <article class="stat-card">
+              <span>Valore</span>
+              <strong>€37.550</strong>
+              <p>Totale pratiche in mora.</p>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Debitore</th>
+                    <th>Importo</th>
+                    <th>Tipo</th>
+                    <th>Data mora</th>
+                    <th>Messaggi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="is-selected clickable-row" data-panel-target="compliance" data-scroll-target="compliance-detail">
+                    <td>NordCargo Logistics</td>
+                    <td>€34.700</td>
+                    <td>Persona giuridica</td>
+                    <td>07 giu 2026</td>
+                    <td>1</td>
+                  </tr>
+                  <tr class="clickable-row" data-panel-target="compliance" data-scroll-target="compliance-detail">
+                    <td>Privato Rossi</td>
+                    <td>€2.850</td>
+                    <td>Persona fisica</td>
+                    <td>04 giu 2026</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="compliance-item progress" data-progress="86">
+          </section>
+
+          <section class="card" id="compliance-detail">
+            <div class="section-head">
               <div>
-                <strong>Persone fisiche</strong>
-                <p>Contatto, note, piano di rientro.</p>
+                <p class="eyebrow">Debitore selezionato</p>
+                <h3>NordCargo Logistics</h3>
               </div>
-              <span>1</span>
+              <span class="badge danger-badge">Messa in mora</span>
             </div>
-            <div class="compliance-item pending" data-progress="92">
-              <div>
-                <strong>Esempio società</strong>
-                <p>Officine Delta S.r.l.</p>
+            <div class="message-feed">
+              <div class="message-bubble outgoing">
+                <div class="message-head">
+                  <strong>Partner legale</strong>
+                  <small>08 giu 2026 · 16:44</small>
+                </div>
+                <p>La lettera di messa in mora è pronta. Serve conferma per l’invio.</p>
               </div>
-              <span>PG</span>
             </div>
-            <div class="compliance-item pending" data-progress="61">
-              <div>
-                <strong>Esempio persona fisica</strong>
-                <p>Rossi Marco</p>
-              </div>
-              <span>PF</span>
-            </div>
-          </div>
+          </section>
         </section>
 
         <section class="panel" id="risks">
@@ -877,193 +812,44 @@
           </section>
         </section>
 
-        <section class="panel" id="partner" data-tour-anchor="partner-overview">
+        <section class="panel" id="partner">
           <div class="section-head">
             <div>
               <p class="eyebrow">Vista partner</p>
-              <h2>Clienti</h2>
+              <h2>Dashboard partner</h2>
             </div>
             <span class="badge dark">3 aziende presidiate</span>
           </div>
 
           <section class="content-grid">
-            <article class="card" data-tour-anchor="partner-workspace">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Inbox</p>
-                  <h3>Da fare adesso</h3>
-                </div>
-                <span class="badge warning-badge">3 item</span>
-              </div>
-              <div class="task-list">
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>CARE Manufacturing · Rinnovo Delta Components</strong>
-                    <p>Bozza Sofia da revisionare.</p>
-                  </div>
-                  <span class="tag warning">Urgente</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>NordFood Services · Sollecito NordCargo</strong>
-                    <p>Piano di rientro da validare.</p>
-                  </div>
-                  <span class="tag">Inbox</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Linea Distribuzione · Debitore persona fisica</strong>
-                    <p>Da classificare.</p>
-                  </div>
-                  <span class="tag success">Priorità</span>
-                </div>
-              </div>
-            </article>
-
             <article class="card">
               <div class="section-head">
                 <div>
-                  <p class="eyebrow">Vista aggregata</p>
-                  <h3>Numeri</h3>
+                  <p class="eyebrow">Sintesi</p>
+                  <h3>Numeri rapidi</h3>
                 </div>
                 <span class="badge dark">Live</span>
               </div>
               <div class="priority-board">
                 <div class="priority-card">
-                  <span>Inbox</span>
+                  <span>Clienti</span>
                   <strong>3</strong>
-                  <p>Messaggi nuovi</p>
-                </div>
-                <div class="priority-card">
-                  <span>Urgenti</span>
-                  <strong>2</strong>
-                  <p>Urgenti</p>
+                  <p>Progetti attivi in gestione.</p>
                 </div>
                 <div class="priority-card">
                   <span>Priorità</span>
-                  <strong>4</strong>
-                  <p>Priorità</p>
+                  <strong>6</strong>
+                  <p>Attività aperte cross-cliente.</p>
                 </div>
                 <div class="priority-card">
-                  <span>Escalation</span>
-                  <strong>1</strong>
-                  <p>Revisioni</p>
+                  <span>Messaggi</span>
+                  <strong>2</strong>
+                  <p>Ultimi ingressi da leggere.</p>
                 </div>
-              </div>
-            </article>
-          </section>
-
-          <section class="content-grid">
-            <article class="card" data-tour-anchor="partner-projects">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Progetti azienda</p>
-                  <h3>Ogni azienda è un progetto</h3>
-                </div>
-                <span class="badge">Selezione attiva</span>
-              </div>
-              <div class="thread-list">
-                <button class="thread-card active-thread">
-                  <div>
-                    <strong>CARE Manufacturing S.r.l.</strong>
-                    <p>Contratti + sofferenze</p>
-                  </div>
-                  <div class="thread-meta">
-                    <span class="tag success">Attiva</span>
-                    <small>79/100 score</small>
-                  </div>
-                </button>
-                <button class="thread-card">
-                  <div>
-                    <strong>NordFood Services S.p.A.</strong>
-                    <p>Contratti + sofferenze</p>
-                  </div>
-                  <div class="thread-meta">
-                    <span class="tag">Attiva</span>
-                    <small>83/100 score</small>
-                  </div>
-                </button>
-                <button class="thread-card">
-                  <div>
-                    <strong>Linea Distribuzione S.r.l.</strong>
-                    <p>Contratti + sofferenze</p>
-                  </div>
-                  <div class="thread-meta">
-                    <span class="tag">Attiva</span>
-                    <small>75/100 score</small>
-                  </div>
-                </button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Progetto selezionato</p>
-                  <h3>CARE Manufacturing S.r.l.</h3>
-                </div>
-                <span class="badge dark">Vista progetto</span>
-              </div>
-              <div class="maturity-list">
-                <div class="maturity-row">
-                  <div>
-                    <strong>Repository</strong>
-                    <p>18 documenti attivi, 3 thread aperti, 2 allegati in revisione</p>
-                  </div>
-                  <span>Live</span>
-                </div>
-                <div class="maturity-row">
-                  <div>
-                    <strong>Contratti</strong>
-                    <p>8 attivi, 2 in rinnovo, 1 con revisione clausole in corso</p>
-                  </div>
-                  <span>2</span>
-                </div>
-                <div class="maturity-row">
-                  <div>
-                    <strong>Sofferenze</strong>
-                    <p>6 pratiche attive, di cui 2 persone fisiche e 4 persone giuridiche</p>
-                  </div>
-                  <span>6</span>
-                </div>
-                <div class="maturity-row">
-                  <div>
-                    <strong>Comunicazioni</strong>
-                    <p>1 messaggio cliente in ingresso, 1 sollecito in bozza, 2 allegati da validare</p>
-                  </div>
-                  <span>Open</span>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          
-
-          <section class="content-grid">
-            <article class="card" data-tour-anchor="partner-comms">
-              <div class="section-head">
-                <div>
-                  <p class="eyebrow">Comunicazioni partner-cliente</p>
-                  <h3>Workspace condiviso al posto delle email</h3>
-                </div>
-                <span class="badge dark">Tracciato</span>
-              </div>
-              <div class="comms-grid">
-                <div class="comms-item">
-                  <strong>Sostituisce il flusso mail</strong>
-                  <p>Richieste del cliente, risposte del partner, invio contratti, solleciti e feedback vivono in un unico spazio operativo condiviso.</p>
-                </div>
-                <div class="comms-item">
-                  <strong>Repository documentale integrabile</strong>
-                  <p>La repository può essere configurata in base alle implementazioni tecnologiche e ai software già usati dal partner per contratti e recupero crediti.</p>
-                </div>
-                <div class="comms-item">
-                  <strong>Notifiche configurabili per il cliente</strong>
-                  <p>Mail, notifiche in-app e WhatsApp possono essere attivati per rinnovi, solleciti, richieste di revisione e nuovi documenti disponibili.</p>
-                </div>
-                <div class="comms-item">
-                  <strong>Storico registrato e tracciato</strong>
-                  <p>Tutte le comunicazioni restano registrate, con audit trail, riferimenti al contratto e cronologia delle azioni svolte.</p>
+                <div class="priority-card">
+                  <span>Scadenze</span>
+                  <strong>3</strong>
+                  <p>Azioni entro i prossimi 7 giorni.</p>
                 </div>
               </div>
             </article>
@@ -1071,35 +857,235 @@
             <article class="card">
               <div class="section-head">
                 <div>
-                  <p class="eyebrow">Repository e notifiche</p>
-                  <h3>Configurazione lato partner</h3>
+                  <p class="eyebrow">Messaggi in arrivo</p>
+                  <h3>Ultimi messaggi</h3>
                 </div>
-                <span class="badge">Setup flessibile</span>
+                <span class="badge warning-badge">2 nuovi</span>
               </div>
               <div class="task-list">
                 <div class="task-item compact-row">
                   <div>
-                    <strong>Repository documenti</strong>
-                    <p>Configurabile su stack partner e procedure cliente, con fascicoli contratti e crediti distinti.</p>
+                    <strong>CARE Manufacturing · NDA Beta Logistics</strong>
+                    <p>Il cliente ha confermato foro e durata.</p>
                   </div>
-                  <span class="tag">Config</span>
+                  <span class="tag">Contratti</span>
                 </div>
                 <div class="task-item compact-row">
                   <div>
-                    <strong>Canali notifica</strong>
-                    <p>Mail, in-app, WhatsApp con regole per priorità, debitore e destinatari.</p>
+                    <strong>NordFood Services · Officine Delta</strong>
+                    <p>Ok cliente all’invio del secondo sollecito.</p>
                   </div>
-                  <span class="tag success">Attivi</span>
-                </div>
-                <div class="task-item compact-row">
-                  <div>
-                    <strong>Audit trail</strong>
-                    <p>Ogni scambio è registrato e consultabile a fini operativi e probatori.</p>
-                  </div>
-                  <span class="tag warning">Presidio</span>
+                  <span class="tag warning">Sofferenze</span>
                 </div>
               </div>
             </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Clienti</p>
+                  <h3>Griglia clienti</h3>
+                </div>
+                <span class="badge">Selezione attiva</span>
+              </div>
+              <div class="template-library partner-client-grid">
+                <button class="template-chip partner-client-chip active-thread" data-panel-target="partner-client">CARE Manufacturing S.r.l.</button>
+                <button class="template-chip partner-client-chip" data-panel-target="partner-client">NordFood Services S.p.A.</button>
+                <button class="template-chip partner-client-chip" data-panel-target="partner-client">Linea Distribuzione S.r.l.</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Scadenze</p>
+                  <h3>Prossime attività</h3>
+                </div>
+                <span class="badge warning-badge">3 prossime</span>
+              </div>
+              <div class="task-list">
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Rivedi bozza NDA Beta Logistics</strong>
+                    <p>CARE Manufacturing · entro oggi</p>
+                  </div>
+                  <span class="tag warning">Oggi</span>
+                </div>
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Invia secondo sollecito Officine Delta</strong>
+                    <p>NordFood Services · domani</p>
+                  </div>
+                  <span class="tag">Domani</span>
+                </div>
+                <div class="task-item compact-row">
+                  <div>
+                    <strong>Autorizza messa in mora NordCargo</strong>
+                    <p>CARE Manufacturing · 11 giu 2026</p>
+                  </div>
+                  <span class="tag success">Settimana</span>
+                </div>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="panel" id="partner-client">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Scheda cliente</p>
+              <h2>CARE Manufacturing S.r.l.</h2>
+            </div>
+            <div class="client-switcher">
+              <label for="partner-client-switch" class="switcher-label">Cambia cliente</label>
+              <select id="partner-client-switch" class="status-select">
+                <option selected>CARE Manufacturing S.r.l.</option>
+                <option>NordFood Services S.p.A.</option>
+                <option>Linea Distribuzione S.r.l.</option>
+              </select>
+            </div>
+          </div>
+
+          <section class="stats-grid">
+            <article class="stat-card">
+              <span>Contratti</span>
+              <strong>3</strong>
+              <p>1 bozza, 1 in revisione, 1 approvato.</p>
+            </article>
+            <article class="stat-card">
+              <span>Sofferenze</span>
+              <strong>2</strong>
+              <p>1 sollecito, 1 messa in mora.</p>
+            </article>
+            <article class="stat-card">
+              <span>Messaggi</span>
+              <strong>3</strong>
+              <p>Su fascicoli cliente attivi.</p>
+            </article>
+            <article class="stat-card">
+              <span>Priorità alte</span>
+              <strong>2</strong>
+              <p>Da gestire questa settimana.</p>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Contratti attivi</p>
+                  <h3>Vista cliente</h3>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Contratto</th>
+                      <th>Stato</th>
+                      <th>Messaggi</th>
+                      <th>Prossimo step</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="is-selected clickable-row" data-panel-target="contract-detail">
+                      <td>NDA Beta Logistics</td>
+                      <td><span class="tag warning">In revisione</span></td>
+                      <td>2</td>
+                      <td>Risposta cliente</td>
+                    </tr>
+                    <tr class="clickable-row" data-panel-target="contract-detail">
+                      <td>Fornitura Delta Components</td>
+                      <td><span class="tag success">Approvato</span></td>
+                      <td>1</td>
+                      <td>Archivio</td>
+                    </tr>
+                    <tr class="clickable-row" data-panel-target="contract-detail">
+                      <td>Consulenza HR Cloud</td>
+                      <td><span class="tag">Bozza</span></td>
+                      <td>0</td>
+                      <td>Revisione partner</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">Posizioni cliente</p>
+                  <h3>Sofferenze e debitori</h3>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Pratica</th>
+                      <th>Tipo</th>
+                      <th>Stato</th>
+                      <th>Messaggi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="clickable-row" data-panel-target="deadlines" data-scroll-target="deadlines-detail">
+                      <td>Officine Delta</td>
+                      <td>Sofferenza</td>
+                      <td><span class="tag warning">Secondo sollecito</span></td>
+                      <td>1</td>
+                    </tr>
+                    <tr class="is-selected clickable-row" data-panel-target="compliance" data-scroll-target="compliance-detail">
+                      <td>NordCargo Logistics</td>
+                      <td>Debitore</td>
+                      <td><span class="tag danger">Messa in mora</span></td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Dettaglio attività</p>
+                <h3>NDA Beta Logistics</h3>
+              </div>
+              <span class="badge warning-badge">In revisione</span>
+            </div>
+            <div class="message-feed">
+              <div class="message-bubble incoming">
+                <div class="message-head">
+                  <strong>Cliente</strong>
+                  <small>09 giu 2026 · 11:28</small>
+                </div>
+                <p>Confermo foro Milano e durata 24 mesi.</p>
+              </div>
+              <div class="message-bubble outgoing">
+                <div class="message-head">
+                  <strong>Partner legale</strong>
+                  <small>09 giu 2026 · 11:42</small>
+                </div>
+                <p>Ricevuto. Procedo con revisione finale della bozza.</p>
+              </div>
+            </div>
+            <div class="composer-box inline-composer">
+              <label class="full">
+                Risposta sulla pratica
+                <textarea rows="3">Aggiornamento del partner sul singolo fascicolo.</textarea>
+              </label>
+              <div class="composer-footer">
+                <div class="composer-meta">
+                  <span class="attachment-pill">+ Allega</span>
+                  <span class="attachment-pill">Cambia stato</span>
+                </div>
+                <button class="primary-button">Invia risposta</button>
+              </div>
+            </div>
           </section>
         </section>
 
@@ -1149,21 +1135,6 @@
           </section>
         </section>
       </main>
-    </div>
-
-    <div class="tour-overlay hidden" id="tour-overlay">
-      <div class="tour-spotlight" id="tour-spotlight"></div>
-      <div class="tour-popover" id="tour-popover">
-        <p class="eyebrow">Guida demo</p>
-        <h3 id="tour-title">Step title</h3>
-        <p id="tour-text">Step text</p>
-        <div class="tour-actions">
-          <span id="tour-progress">1 / 5</span>
-          <button class="ghost-button" id="tour-prev">Indietro</button>
-          <button class="primary-button" id="tour-next">Avanti</button>
-          <button class="ghost-button" id="tour-close">Chiudi guida</button>
-        </div>
-      </div>
     </div>
 
     <script src="script.js"></script>
