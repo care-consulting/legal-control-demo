@@ -139,36 +139,6 @@ textarea {
   gap: 18px;
 }
 
-.landing-value {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 18px;
-}
-
-.value-card {
-  padding: 22px;
-  border-radius: 24px;
-  background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: var(--shadow);
-}
-
-.value-card h3 {
-  margin: 8px 0 10px;
-}
-
-.value-list {
-  margin: 14px 0 0;
-  padding-left: 18px;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.value-list li + li {
-  margin-top: 6px;
-}
-
 .landing-entry {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -192,63 +162,6 @@ textarea {
   margin-top: 16px;
 }
 
-.proof-card {
-  flex: 1;
-  flex-direction: column;
-  padding: 20px;
-  border-radius: 24px;
-}
-
-.proof-card h3 {
-  margin: 8px 0 10px;
-}
-
-.intro-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 30;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  background: rgba(24, 34, 45, 0.4);
-  backdrop-filter: blur(16px);
-}
-
-.intro-modal.hidden {
-  display: none;
-}
-
-.intro-card {
-  width: min(980px, 100%);
-  padding: 34px;
-  border-radius: 32px;
-  background:
-    radial-gradient(circle at top right, rgba(217, 104, 59, 0.22), transparent 26%),
-    linear-gradient(145deg, rgba(255, 252, 247, 0.98), rgba(248, 242, 232, 0.96));
-  box-shadow: var(--shadow);
-}
-
-.intro-copy h1 {
-  margin: 8px 0 12px;
-  font-size: clamp(2.2rem, 5vw, 4.4rem);
-  line-height: 0.95;
-  max-width: 10ch;
-}
-
-.intro-copy p:last-child {
-  max-width: 64ch;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.intro-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin: 24px 0 28px;
-}
-
-.intro-grid article,
 .action-tile {
   padding: 18px;
   border-radius: 18px;
@@ -256,39 +169,12 @@ textarea {
   border: 1px solid rgba(24, 34, 45, 0.08);
 }
 
-.intro-grid article p,
 .action-tile p {
   color: var(--muted);
 }
 
-.intro-actions {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.setup-strip {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 24px;
-  padding: 18px 20px;
-  border-radius: 20px;
-  background: rgba(24, 34, 45, 0.05);
-}
-
-.setup-steps {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.setup-steps span {
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  font-size: 0.86rem;
-  font-weight: 700;
+.compact-chips {
+  margin-top: 14px;
 }
 
 .shell {

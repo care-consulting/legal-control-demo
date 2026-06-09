@@ -3,14 +3,11 @@ const panels = document.querySelectorAll(".panel");
 const form = document.getElementById("contract-form");
 const draftOutput = document.getElementById("draft-output");
 const resetButton = document.getElementById("reset-contract");
-const introModal = document.getElementById("intro-modal");
-const enterAppButton = document.getElementById("enter-app");
 const panelLinks = document.querySelectorAll("[data-panel-target]");
 const landingScreen = document.getElementById("landing-screen");
 const appShell = document.getElementById("app-shell");
 const openCompanyDemoButton = document.getElementById("open-company-demo");
 const openPartnerDemoButton = document.getElementById("open-partner-demo");
-const openWorkspaceButton = document.getElementById("open-workspace");
 const startTourButton = document.getElementById("start-tour");
 const tourOverlay = document.getElementById("tour-overlay");
 const tourSpotlight = document.getElementById("tour-spotlight");
@@ -22,8 +19,6 @@ const tourPrev = document.getElementById("tour-prev");
 const tourNext = document.getElementById("tour-next");
 const tourClose = document.getElementById("tour-close");
 const entryButtons = document.querySelectorAll(".entry-button");
-const introTitle = document.getElementById("intro-title");
-const introText = document.getElementById("intro-text");
 const sidebarEyebrow = document.getElementById("sidebar-eyebrow");
 const sidebarTitle = document.getElementById("sidebar-title");
 const sidebarText = document.getElementById("sidebar-text");
@@ -229,9 +224,6 @@ const applyMode = (mode) => {
   });
 
   if (mode === "partner") {
-    introTitle.textContent = "La vista partner per presidiare contratti e recupero crediti su piu' aziende.";
-    introText.textContent =
-      "Questa demo mostra come un partner legale puo' usare la piattaforma per seguire piu' clienti, distinguere progetti azienda, vedere inbox aggregate e lavorare su contratti o posizioni in sofferenza.";
     sidebarEyebrow.textContent = "Vista partner";
     sidebarTitle.textContent = "Progetti azienda, inbox aggregata e fascicoli tracciati";
     sidebarText.textContent =
@@ -244,9 +236,6 @@ const applyMode = (mode) => {
       "In vista partner il repository viene letto per la singola azienda selezionata nel portafoglio. Qui il professionista segue contratti, solleciti, messaggi, allegati, stati e storico completo senza passare da email sparse.";
     openPanel("partner");
   } else {
-    introTitle.textContent = "L’MVP operativo per contratti e recupero crediti.";
-    introText.textContent =
-      "Contratti con enti privati e posizioni in sofferenza in un unico ambiente. L’azienda presidia il lavoro standard e il partner entra sui casi che richiedono intervento.";
     sidebarEyebrow.textContent = "Posizionamento";
     sidebarTitle.textContent = "Contratti e recupero crediti nello stesso workspace";
     sidebarText.textContent =
@@ -408,29 +397,17 @@ const enterMode = (mode) => {
 };
 
 openCompanyDemoButton.addEventListener("click", () => {
-  applyMode("company");
-  showWorkspace();
+  enterMode("company");
 });
 
 openPartnerDemoButton.addEventListener("click", () => {
-  applyMode("partner");
-  showWorkspace();
-});
-
-openWorkspaceButton.addEventListener("click", () => {
-  applyMode("company");
-  showWorkspace();
+  enterMode("partner");
 });
 
 entryButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    applyMode(button.dataset.mode);
-    showWorkspace();
+    enterMode(button.dataset.mode);
   });
-});
-
-enterAppButton.addEventListener("click", () => {
-  introModal.classList.add("hidden");
 });
 
 startTourButton.addEventListener("click", () => {
