@@ -38,25 +38,25 @@ const companyTourSteps = [
     panel: "overview",
     anchor: "overview-hero",
     title: "1. Visione generale",
-    text: "Qui stai vedendo il workspace aziendale: il punto non e' fare consulenza, ma dare controllo operativo su contratti, scadenze, adempimenti e rischi ricorrenti."
+    text: "Qui stai vedendo il nuovo perimetro dell'MVP: contratti con enti privati e posizioni in sofferenza nello stesso workspace aziendale."
   },
   {
     panel: "overview",
     anchor: "overview-alerts",
     title: "2. Alert e priorita'",
-    text: "In questa schermata l'azienda capisce subito cosa richiede attenzione: rinnovi taciti, documenti mancanti e clausole sbilanciate. Il valore e' la leggibilita' immediata."
+    text: "In questa schermata l'azienda capisce subito cosa richiede attenzione: un rinnovo contrattuale, una pratica in sofferenza critica e un debitore da classificare."
   },
   {
     panel: "deadlines",
     anchor: "deadlines-timeline",
-    title: "3. Scadenze e rinnovi",
-    text: "Qui l'azienda presidia date che di solito si perdono: rinnovi taciti, adempimenti privacy, delibere e lettere di incarico. Per un avvocato questo e' un punto di accesso commerciale molto forte."
+    title: "3. Posizioni in sofferenza",
+    text: "Questa sezione non parla piu' di adempimenti generici: mostra le pratiche di recupero crediti ordinate per importo, anzianita' e prossima azione."
   },
   {
     panel: "compliance",
     anchor: "compliance-list",
-    title: "4. Compliance operativa",
-    text: "Questa sezione rende gestibili gli adempimenti ricorrenti con checklist semplici. L'azienda resta autonoma sul lavoro standard e capisce subito dove manca qualcosa."
+    title: "4. Tipo di debitore",
+    text: "Qui si vede una regola fondamentale del prodotto: il recupero crediti cambia a seconda che il debitore sia persona fisica o persona giuridica."
   },
   {
     panel: "contract-detail",
@@ -68,25 +68,25 @@ const companyTourSteps = [
     panel: "contracts",
     anchor: "contracts-builder",
     title: "6. Creazione guidata",
-    text: "Questo modulo serve a produrre una prima bozza standard in autonomia. L'azienda compila pochi campi, genera il documento e chiede revisione solo se emergono eccezioni."
+    text: "Questo modulo copre la prima area del foglio: contratti con enti privati. L'azienda genera la bozza, la salva nel fascicolo e porta al partner solo le eccezioni."
   },
   {
     panel: "repository",
     anchor: "repository-thread",
     title: "7. Repository e thread operativi",
-    text: "Qui l'azienda vede il repository documentale e le comunicazioni operative sul task: messaggi, allegati, stato della richiesta e storico completo in un unico punto."
+    text: "Qui convivono contratti, solleciti, allegati probatori e messaggi. Il repository e' il centro operativo comune dei due moduli."
   },
   {
     panel: "risks",
     anchor: "risks-grid",
-    title: "8. Escalation selettiva",
-    text: "Qui si chiude la logica del prodotto: il sistema non sostituisce il professionista, ma porta al professionista solo i casi davvero critici o negozialmente sensibili."
+    title: "8. Azioni legali e priorita'",
+    text: "Qui si vede il passaggio da monitoraggio a decisione: sollecito, piano di rientro, revisione partner o azione ulteriore."
   },
   {
     panel: "reports",
     anchor: "reports-summary",
     title: "9. Report executive",
-    text: "Il report finale rende il prodotto leggibile anche per CEO e CFO. Questo aiuta la vendita interna nell'azienda e rende il partner piu' rilevante nel rapporto con il cliente."
+    text: "Il report finale riassume contratti sensibili, valore esposto e richieste partner. Serve a rendere il servizio leggibile subito."
   },
   {
     panel: "overview",
@@ -107,19 +107,19 @@ const partnerTourSteps = [
     panel: "partner",
     anchor: "partner-projects",
     title: "2. Aziende come progetti",
-    text: "Ogni azienda e' un progetto selezionabile. Da qui il partner entra nel contesto della singola azienda e vede tutto cio' che la riguarda."
+    text: "Ogni azienda e' un progetto selezionabile. Da qui il partner entra nel contesto della singola azienda e vede contratti, sofferenze, repository e comunicazioni."
   },
   {
     panel: "repository",
     anchor: "repository-thread",
     title: "3. Repository per azienda selezionata",
-    text: "Qui il partner lavora sul repository della singola azienda scelta nel portafoglio: thread, allegati, stato della comunicazione, repository documentale e storico completamente tracciato."
+    text: "Qui il partner lavora sul repository della singola azienda scelta nel portafoglio: contratti, solleciti, allegati, stato della comunicazione e storico completamente tracciato."
   },
   {
     panel: "risks",
     anchor: "risks-grid",
-    title: "4. Escalation utili",
-    text: "Qui emergono i casi su cui il professionista entra davvero: penali, responsabilita', rinnovi taciti e negoziazioni fuori standard."
+    title: "4. Azioni utili",
+    text: "Qui emergono i casi su cui il professionista entra davvero: rinnovi sensibili, validazione solleciti, piani di rientro e pratiche da spingere."
   },
   {
     panel: "contract-detail",
@@ -131,7 +131,7 @@ const partnerTourSteps = [
     panel: "reports",
     anchor: "reports-summary",
     title: "6. Report verso il cliente",
-    text: "Il report executive aiuta il professionista a parlare con CEO e CFO in modo ordinato, trasformando il lavoro legale in presidio continuativo."
+    text: "Il report executive aiuta il professionista a parlare con l'azienda in modo ordinato, trasformando contratti e recupero crediti in presidio continuativo."
   },
   {
     panel: "partner",
@@ -163,9 +163,9 @@ Clausole incluse
 - Recesso anticipato con preavviso di 30 giorni.
 
 Azioni suggerite
-1. Esportare in Word/PDF.
-2. Inviare ad acquisti e operations per validazione.
-3. Richiedere revisione specialistica solo se la controparte negozia clausole critiche.`;
+1. Salvare la bozza nel fascicolo contratto.
+2. Inviare il task al partner per revisione.
+3. Attendere cambio stato e notifica cliente.`;
 
 const renderDraft = (formData) => {
   const clauses = [];
@@ -197,9 +197,9 @@ Clausole incluse
 ${clauses.map((clause) => `- ${clause}`).join("\n")}
 
 Azioni suggerite
-1. Salva la bozza in archivio.
-2. Condividila con amministrazione o acquisti.
-3. Attiva consulenza solo se servono modifiche fuori standard.`;
+1. Salva la bozza nel fascicolo.
+2. Invia la pratica al partner per revisione.
+3. Usa il contratto solo dopo stato "approvato per uso".`;
 };
 
 navItems.forEach((item) => {
@@ -229,34 +229,34 @@ const applyMode = (mode) => {
   });
 
   if (mode === "partner") {
-    introTitle.textContent = "La vista partner per presidiare aziende e casi qualificati.";
+    introTitle.textContent = "La vista partner per presidiare contratti e recupero crediti su piu' aziende.";
     introText.textContent =
-      "Questa demo mostra come un avvocato puo' usare la piattaforma per seguire piu' clienti, vedere solo i casi che contano e intervenire dove genera valore.";
+      "Questa demo mostra come un partner legale puo' usare la piattaforma per seguire piu' clienti, distinguere progetti azienda, vedere inbox aggregate e lavorare su contratti o posizioni in sofferenza.";
     sidebarEyebrow.textContent = "Vista partner";
-    sidebarTitle.textContent = "Portafoglio clienti ed escalation qualificate";
+    sidebarTitle.textContent = "Progetti azienda, inbox aggregata e fascicoli tracciati";
     sidebarText.textContent =
-      "Il professionista presidia piu' aziende, riceve richieste strutturate e interviene solo su revisione, negoziazione e casi fuori standard.";
+      "Il professionista presidia piu' aziende, riceve richieste strutturate su contratti e recupero crediti e interviene per validazione, negoziazione o azione ulteriore.";
     workspaceEyebrow.textContent = "Partner workspace";
     workspaceTitle.textContent = "Studio partner | Portafoglio aziende";
-    repositoryTitle.textContent = "Repository della singola azienda: documenti, thread e stati tracciati";
+    repositoryTitle.textContent = "Repository della singola azienda: contratti, solleciti, thread e stati tracciati";
     repositoryBadge.textContent = "Per azienda";
     repositoryCopy.textContent =
-      "In vista partner il repository viene letto per la singola azienda selezionata nel portafoglio. Qui il professionista segue documenti, messaggi, allegati, stati e storico completo senza passare da email sparse.";
+      "In vista partner il repository viene letto per la singola azienda selezionata nel portafoglio. Qui il professionista segue contratti, solleciti, messaggi, allegati, stati e storico completo senza passare da email sparse.";
     openPanel("partner");
   } else {
-    introTitle.textContent = "Il layer operativo per governare il lavoro legale ricorrente.";
+    introTitle.textContent = "L’MVP operativo per contratti e recupero crediti.";
     introText.textContent =
-      "Contratti, scadenze, adempimenti e rischi in un unico ambiente. L’azienda presidia le attività standard in autonomia e scala solo i casi che richiedono intervento specialistico.";
+      "Contratti con enti privati e posizioni in sofferenza in un unico ambiente. L’azienda presidia il lavoro standard e il partner entra sui casi che richiedono intervento.";
     sidebarEyebrow.textContent = "Posizionamento";
-    sidebarTitle.textContent = "Autonomia operativa, consulenza solo per eccezioni";
+    sidebarTitle.textContent = "Contratti e recupero crediti nello stesso workspace";
     sidebarText.textContent =
-      "La piattaforma governa contratti, scadenze e adempimenti ricorrenti. Il supporto specialistico si attiva solo nei casi fuori standard.";
+      "La piattaforma governa contratti con enti privati e pratiche di recupero crediti. Il supporto specialistico si attiva sulle revisioni o sulle azioni da formalizzare.";
     workspaceEyebrow.textContent = "Company workspace";
     workspaceTitle.textContent = "CARE Manufacturing S.r.l.";
-    repositoryTitle.textContent = "Documenti, messaggi e stati in un unico workspace tracciato";
+    repositoryTitle.textContent = "Contratti, solleciti, messaggi e stati in un unico workspace tracciato";
     repositoryBadge.textContent = "Core workflow";
     repositoryCopy.textContent =
-      "Qui l’azienda gestisce fascicoli, thread, allegati e stati di lavorazione in un unico spazio operativo. Tutto resta tracciato e sostituisce lo scambio dispersivo via mail.";
+      "Qui l’azienda gestisce fascicoli, thread, contratti, lettere di sollecito, allegati e stati di lavorazione in un unico spazio operativo. Tutto resta tracciato e sostituisce lo scambio dispersivo via mail.";
     openPanel("overview");
   }
 };
